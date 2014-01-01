@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>ORG 测试页面</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="title" content="ORG 测试页面"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2014-01-01T12:04+0800"/>
+<meta name="author" content="Zhao Wenbin"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="./css/core.css" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+/**
+ *
+ * @source: http://orgmode.org/mathjax/MathJax.js
+ *
+ * @licstart  The following is the entire license notice for the
+ *  JavaScript code in http://orgmode.org/mathjax/MathJax.js.
+ *
+ * Copyright (C) 2012-2013  MathJax
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * @licend  The above is the entire license notice
+ * for the JavaScript code in http://orgmode.org/mathjax/MathJax.js.
+ *
+ */
+
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code below.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code below is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code below.
+*/
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+
+</div>
+
+<div id="content">
+<h1 class="title">ORG 测试页面</h1>
+
+
+<p class="verse">
+Great clouds overhead<br/>
+Tiny black birds rise and fall<br/>
+Snow covers Emacs<br/>
+<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &ndash; AlexSchroeder<br/>
+</p>
+
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 数学公式</a>
+<ul>
+<li><a href="#sec-1-1">1.1 爱因斯坦质能方程</a></li>
+<li><a href="#sec-1-2">1.2 勾股定理</a></li>
+<li><a href="#sec-1-3">1.3 Physical Problem</a></li>
+<li><a href="#sec-1-4">1.4 万有引力公式</a></li>
+<li><a href="#sec-1-5">1.5 欧拉公式</a></li>
+<li><a href="#sec-1-6">1.6 欧基米德浮力公式</a></li>
+<li><a href="#sec-1-7">1.7 牛顿－莱布尼茨公式</a></li>
+<li><a href="#sec-1-8">1.8 微分中值定理</a></li>
+</ul>
+</li>
+<li><a href="#sec-2">2 历史故事</a>
+<ul>
+<li><a href="#sec-2-1">2.1 九龙夺嫡</a></li>
+<li><a href="#sec-2-2">2.2 李卫当官</a></li>
+</ul>
+</li>
+<li><a href="#sec-3">3 IT 技术</a>
+<ul>
+<li><a href="#sec-3-1">3.1 LINUX 史话</a></li>
+<li><a href="#sec-3-2">3.2 操作系统</a>
+<ul>
+<li><a href="#sec-3-2-1">3.2.1 Windows</a></li>
+<li><a href="#sec-3-2-2">3.2.2 MAC OS X</a></li>
+<li><a href="#sec-3-2-3">3.2.3 Minix</a></li>
+<li><a href="#sec-3-2-4">3.2.4 Linux</a></li>
+<li><a href="#sec-3-2-5">3.2.5 Plan9</a></li>
+<li><a href="#sec-3-2-6">3.2.6 FreeBSD</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-3">3.3 编程语言</a>
+<ul>
+<li><a href="#sec-3-3-1">3.3.1 ASM</a></li>
+<li><a href="#sec-3-3-2">3.3.2 C</a></li>
+<li><a href="#sec-3-3-3">3.3.3 C++</a></li>
+<li><a href="#sec-3-3-4">3.3.4 Java</a></li>
+<li><a href="#sec-3-3-5">3.3.5 Scheme/Lisp/Racket</a></li>
+<li><a href="#sec-3-3-6">3.3.6 Python/Perl/Ruby</a></li>
+</ul>
+</li>
+<li><a href="#sec-3-4">3.4 算法与数据结构</a></li>
+</ul>
+</li>
+<li><a href="#sec-4">4 人文自然</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> 数学公式</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> 爱因斯坦质能方程</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+<p>
+   $$e = mc^2$$
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> 勾股定理</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<p>
+设直角三角形 a 和 b 为两直角边，c 为斜边，则有：$$ a^2 + b^2 = c^2 $$
+</p>
+<ul>
+<li>设一直角三角形，其中两边长为 3 和 4,求第三边长度。
+
+<p>
+   <b>解：</b> 
+</p><ul>
+<li>若第三边为直角边，则 \(c = \sqrt{ 3^2 + 4^2 } = 5\)
+</li>
+<li>若第三边不是直角边，则 \(c = \sqrt{ 4^2 - 3^2 } = \sqrt{7} = 2.646\)
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Physical Problem</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+<p>
+Angles are written as Greek letters &alpha;, &beta; and &gamma;. The mass if
+the sun is M<sub>sun</sub> = 1.989 x 10<sup>30</sup> kg. The radius of the sun is R<sub>sun</sub> =
+6.96 x 10<sup>8</sup> m. If \(a^2=b\) and \(b=2\), then the solution must be either
+\(a=+\sqrt{2}\) or \(a=-\sqrt{2}\).
+\begin{equation}
+x=\sqrt{b}
+\end{equation}
+
+
+</p></div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> 万有引力公式</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+
+
+$$ F = G \frac{Mm}{R^2} $$
+
+<p>
+万有引力大小正比于两物体的质量之积，与距离之平方成反比
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> 欧拉公式</h3>
+<div class="outline-text-3" id="text-1-5">
+
+
+
+
+$$ e^{j\omega} = cos(\omega) + j sin(\omega) $$
+$$ cos( \omega ) = \frac{ e^{j\omega} + e^{-j\omega} }{2} $$
+
+</div>
+
+</div>
+
+<div id="outline-container-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> 欧基米德浮力公式</h3>
+<div class="outline-text-3" id="text-1-6">
+
+
+
+
+$$ F_{浮} = m_{排}g $$
+
+</div>
+
+</div>
+
+<div id="outline-container-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> 牛顿－莱布尼茨公式</h3>
+<div class="outline-text-3" id="text-1-7">
+
+
+
+
+$$ \int_{a}^{b} f(x) dx = F(b) - F(a) $$
+
+</div>
+
+</div>
+
+<div id="outline-container-1-8" class="outline-3">
+<h3 id="sec-1-8"><span class="section-number-3">1.8</span> 微分中值定理</h3>
+<div class="outline-text-3" id="text-1-8">
+
+
+$$\frac{f(b) - f(a)} { b-a } = f(\epsilon) \quad (a \leq \epsilon \leq b)$$
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> 历史故事</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> 九龙夺嫡</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> 李卫当官</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> IT 技术</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> LINUX 史话</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<p>
+Linux 诞生于 1991 年，源于芬兰一大学生的业余爱好。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> 操作系统</h3>
+<div class="outline-text-3" id="text-3-2">
+
+
+
+</div>
+
+<div id="outline-container-3-2-1" class="outline-4">
+<h4 id="sec-3-2-1"><span class="section-number-4">3.2.1</span> Windows</h4>
+<div class="outline-text-4" id="text-3-2-1">
+
+
+<p>
+最多被布置的操作系统，是使更多的人进入 PC 时代的伟大发明，拥有最多的使用者和应用。虽然被许多人指责，但不可否认 Windows 的贡献。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2-2" class="outline-4">
+<h4 id="sec-3-2-2"><span class="section-number-4">3.2.2</span> MAC OS X</h4>
+<div class="outline-text-4" id="text-3-2-2">
+
+
+<p>
+唯一可以与 Windows 相媲美的操作系统。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2-3" class="outline-4">
+<h4 id="sec-3-2-3"><span class="section-number-4">3.2.3</span> Minix</h4>
+<div class="outline-text-4" id="text-3-2-3">
+
+
+<p>
+目前为大多数人认可的贡献是它启发了 Linus 牵头开发了 Linux 操作系统。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2-4" class="outline-4">
+<h4 id="sec-3-2-4"><span class="section-number-4">3.2.4</span> Linux</h4>
+<div class="outline-text-4" id="text-3-2-4">
+
+
+<p>
+LINUX 作为开源界近年的重要工程，是整合各开源项目的主要平台。以 Minix 为蓝本开发出的类 UNIX 操作系统，强调工程实现，虽然批评者认为其缺少现代操作系统的一些新的设计，但运行十分可靠，支持非常多的硬件，进化速度非常快。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2-5" class="outline-4">
+<h4 id="sec-3-2-5"><span class="section-number-4">3.2.5</span> Plan9</h4>
+<div class="outline-text-4" id="text-3-2-5">
+
+
+<p>
+实验性的操作系统，是 Bell 实验室对 UNIX 开发思路上提出了很多新的设计。强化了一切皆文件的设计，细化了文件系统层次。虽然几乎不能投入实用，但对于操作系统设计有很多的参考价值。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2-6" class="outline-4">
+<h4 id="sec-3-2-6"><span class="section-number-4">3.2.6</span> FreeBSD</h4>
+<div class="outline-text-4" id="text-3-2-6">
+
+
+<p>
+先于 LINUX 操作系统的可运行在 x86 平台上的类 UNIX 操作系统，具有纯正的 UNIX 血统。在网络应用上具有非常重要的应用空间，有强大的开发团队，但较于 Linux 它对于硬件支持和个人使用方面的支持有限。虽然有人坚持 FreeBSD 较 Linux 更为优秀，但 Linux 将越来越多地占据 BSD 的布置。
+</p>
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> 编程语言</h3>
+<div class="outline-text-3" id="text-3-3">
+
+
+
+</div>
+
+<div id="outline-container-3-3-1" class="outline-4">
+<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> ASM</h4>
+<div class="outline-text-4" id="text-3-3-1">
+
+
+<p>
+处理器终级语言，在优化和理解计算机架构上十分重要。
+</p>
+<p>
+直接用 ASM 开发将越来越困难，但理解简单的汇编语言是必要的。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-3-2" class="outline-4">
+<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> C</h4>
+<div class="outline-text-4" id="text-3-3-2">
+
+
+<p>
+UNIX 的主要开发语言，一种实用的、简洁的、高效的语言。其运行效率可堪与机器汇编语言相比，语法则比之简洁。在目前的操作系统中，标准开发库使得 C 语言成为一种可移植的语言工具。有人将之看作 UNIX/LINUX 上的脚本语言。
+</p>
+<p>
+虽然缺少现代语言中的许多特性，但对于追求效率和机器底层操作性的方面有无法替代的地位。对于想要对计算机学深入理解，进行系统级开发，追求工程性的程序员，C 是必要的一门学问。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-3-3" class="outline-4">
+<h4 id="sec-3-3-3"><span class="section-number-4">3.3.3</span> C++</h4>
+<div class="outline-text-4" id="text-3-3-3">
+
+
+<p>
+在兼容 C 语言标准的前提下加入了面向对象、模板等现代语言的功能。既包含了底层数据操作的特性，又为工程开发提供了许多方便的功能。
+</p>
+<p>
+批评者认为 C++ 语言过于庞杂，兼容 C 语言束缚了语言的语法美感，库的实现过于庞大，过深的封装，缺少自动内存管理等。这门语言入门较 C 语言容易，但极进阶比较难。虽然有不少很好的库和模板，没有统一的 API 设计使得不同库之间的实现混乱、庞大，用户难以学习。
+</p>
+<p>
+C++ 有许多好的功能，在 GUI、大型应用程序开发方面具有很大的应用空间。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-3-4" class="outline-4">
+<h4 id="sec-3-3-4"><span class="section-number-4">3.3.4</span> Java</h4>
+<div class="outline-text-4" id="text-3-3-4">
+
+
+<p>
+工业化设计的语言，以规范而不求灵活为特点，高度的可移植性，面向对象设计，具有良好的库的设计，特别适合于开发大型程序。
+</p>
+<p>
+批评者认为其缺少必要的语言功能，不符合强调程序设计技术和艺术的品味，在虚拟机上运行使得其效率要远低下于编译语言。
+</p>
+<p>
+对于移动平台开发，可移植平台开发是十分有效的。对于想以编程为工作的码农们，掌握 Java 是必要的。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-3-5" class="outline-4">
+<h4 id="sec-3-3-5"><span class="section-number-4">3.3.5</span> Scheme/Lisp/Racket</h4>
+<div class="outline-text-4" id="text-3-3-5">
+
+
+<p>
+LISP 作为最早的程序语言之一（在目前已知的、还在使用的语言中仅次于 Fortran）。其中有很多领先于时代的设计时至今日仍然是非常高端的设计。现代语言中或多或少都借鉴了 LISP 中的特性，如第一类函数、高阶函数、动态类型等。LISP 除了这些特性外，S 表达式的特殊表达方式使得其语法与数据高度统一，具有很大的扩展性。
+</p>
+<p>
+LISP 的缺点在于缺少可靠的实现和编译器，缺少统一的库的设计。LISP 对于想要认真思考程序设计的程序员是必修的一门学问。
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-3-6" class="outline-4">
+<h4 id="sec-3-3-6"><span class="section-number-4">3.3.6</span> Python/Perl/Ruby</h4>
+<div class="outline-text-4" id="text-3-3-6">
+
+
+<p>
+现代语言中高度实用的脚本语言，语言设计上从 Perl、Python 和 Ruby 依序更加美观和强大，库的实现上 Perl 和 Python 最为强大、Ruby 有待完整。
+</p>
+<p>
+对于日常维护、一次性处理方面脚本语言具有很强的应用空间。这类语言设计中包含了现代语言的很多好的设计，在计算性能越来越强的情况下，脚本可以广泛地用于各种领域。作为程序员掌握一门脚本语言是必须的。
+</p>
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> 算法与数据结构</h3>
+<div class="outline-text-3" id="text-3-4">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> 人文自然</h2>
+<div class="outline-text-2" id="text-4">
+
+
+
+
+
+</div>
+</div>
+</div>
+
+<div id="postamble">
+<p class="date">Date: 2014-01-01T12:04+0800</p>
+<p class="author">Author: Zhao Wenbin</p>
+<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
+<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
+
+</div>
+</body>
+</html>

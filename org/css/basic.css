@@ -1,0 +1,37 @@
+h1
+{
+    color: #222277;
+}
+
+h2
+{
+    color: #222299;
+}
+
+h3
+{
+    text-indent: 12px;
+    color: #2222BB;
+}
+
+body
+{
+    background-color: #EEEEEE;
+    margin: 10%;
+}
+
+hr
+{
+    color: #111111;
+}
+
+div#postamble
+{
+    background-color: #DDDDDD;
+    box-pack:center;
+    box-align:center;    
+    border:1px solid gray;
+    margin:12px;
+    padding: 10px;
+    color: #111111;
+}
