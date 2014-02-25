@@ -1,10 +1,13 @@
-<html>
+---
+layout: default
+title: Your New Jekyll Site
+---
 
-  <head>
-    first page
-  </head>
-
-  <body>
-    It Works
-  </body>
-</html>
+<div id="home">
+  <h1>Blog Posts</h1>
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
