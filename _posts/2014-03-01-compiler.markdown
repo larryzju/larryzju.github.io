@@ -1,0 +1,107 @@
+---
+layout: post
+title:  "编译器变量定义问题小记"
+categories: programming
+---
+
+## 问题：
+
+对下面的程序：
+
+* 编译器会如何处理静态变量，常数变量，局部变量
+
+* 静态变量和局部变量的初始化和赋值是如何进行的
+
+{% highlight C %}
+static int sv = 0X1234;
+const char abc[] = "hello";
+
+int rt(void)
+{
+    int i;
+    i = 0x5678;
+
+    int j;
+    j = i + j;
+    
+    int m = 0x1234;
+
+    sv = 0x2468
+
+    return j;
+}
+{% endhighlight %}
+
+## 结论：
+
+用命令 `gcc -o rt.o rt -c -g -m32 -O0` 编译并链接，反汇编。有以下结论：
+
+
+* *常数变量被放在 .rodata section 内*
+
+{% highlight c %}
+Disassembly of section .rodata:
+
+080484a8 <_fp_hw>:
+ 80484a8:       03 00                   add    (%eax),%eax
+        ...
+
+080484ac <_IO_stdin_used>:
+ 80484ac:       01 00                   add    %eax,(%eax)
+ 80484ae:       02 00                   add    (%eax),%al
+
+080484b0 <abc>:
+ 80484b0:       68 65 6c 6c 6f          push   $0x6f6c6c65
+        ...
+{% endhighlight %}
+
+* *静态变量被链接后，初始化的值编译和链接时会被写在内存位置(.data section)中，在程序内直接使用其内存位置（0x8049678）*
+
+{% highlight c %}
+Disassembly of section .rodata:
+
+080484a8 <_fp_hw>:
+ 80484a8:       03 00                   add    (%eax),%eax
+        ...
+
+080484ac <_IO_stdin_used>:
+ 80484ac:       01 00                   add    %eax,(%eax)
+ 80484ae:       02 00                   add    (%eax),%al
+
+080484b0 <abc>:
+ 80484b0:       68 65 6c 6c 6f          push   $0x6f6c6c65
+        ...
+{% endhighlight %}
+
+* *局部变量的值放在栈内，可以看出初始化和赋值操作的效果一样，都是向栈的空间写入数据。从汇编角度，定义只不过是保留了栈的一块空间。如果有定义而未初始化，如程序里的 j，那么 j 的内容是不确定的*
+
+{% highlight c %}
+080483f0 <rt>:
+static int sv = 0X1234;
+const char abc[] = "hello";
+
+int rt(void)
+{
+ 80483f0:       55                      push   %ebp
+ 80483f1:       89 e5                   mov    %esp,%ebp
+ 80483f3:       83 ec 10                sub    $0x10,%esp
+    int i;
+    i = 0x5678;
+ 80483f6:       c7 45 fc 78 56 00 00    movl   $0x5678,-0x4(%ebp)
+
+    int j;
+    j = i + j;
+ 80483fd:       8b 45 fc                mov    -0x4(%ebp),%eax
+ 8048400:       01 45 f8                add    %eax,-0x8(%ebp)
+    
+    int m = 0x1234;
+ 8048403:       c7 45 f4 34 12 00 00    movl   $0x1234,-0xc(%ebp)
+
+    sv = 0x2468;
+ 804840a:       c7 05 78 96 04 08 68    movl   $0x2468,0x8049678
+ 8048411:       24 00 00 
+
+    return j;
+ 8048414:       8b 45 f8                mov    -0x8(%ebp),%eax
+}
+{% endhighlight %}
