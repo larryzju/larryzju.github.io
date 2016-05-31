@@ -1,0 +1,29 @@
+---
+title: CGI 与 FastCGI 备忘
+layout: post
+categories: technology,note
+---
+
+# 概述
+
+CGI ( common gateway interface ) 是 WEB 服务器与浏览器之间进行动态资源交换的一种**协议** ，有时也指 CGI program 或 CGI script。
+
+WEB 服务器配置 CGI 服务，当收到请求服务后，准备执行环境并调用 CGI 脚本，将 CGI 脚本标准输出(stdout) 作为 HTTP 响应头和内容返回。
+
+CGI 脚本可由任何语言编写，其本质是一个生成页面内容的外部程序，用于为页面增加动态内容。与普通程序输入输出不同，CGI 的输入为 HTTP 请求（POST或GET等）而输出中应该包含 `MIME-TYPE` 头，如 `Content-type: text/html\n\n` 来标志返回 HTTP 类型。
+
+FastCGI 为了解决 CGI 对每次请求都单独发起一个进程（或线程）来执行造成大量的开销，引入“池”的概念，启动 N 个守护进程，并从进程池中取出一个空闲的进程来处理请求。
+
+# Apache CGI 配置
+
+* `LoadModule` 加载相关 Apache 模块（cgi, cgid, fcgid 等）
+* `ScriptAlias` 配置目录，该目录下的文件将被视为 CGI 脚本（要求可执行、有读写权限）
+* `AddHandler` 或 `SetHandler` 匹配可执行脚本
+* `Options +ExecCGI` 使 Apache 执行目录下的文件
+
+# CGI 脚本
+
+CGI 脚本可以用任何编程语言写成，主要解析输入并生成输出。输入以键值对表示，主流语言都有可用的库来简化解析输入和调试过程。
+
+* perl 可以使用 `CGI.pm` 模块
+* python 内置有 `cgi` 模块
