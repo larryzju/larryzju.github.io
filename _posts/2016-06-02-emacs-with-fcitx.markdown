@@ -17,14 +17,15 @@ categories: tools
 
 3. 配置 fcitx（使用 `fcitx-config-gtk3` 命令，这里我习惯将输入法换出快捷键设置为 `Ctrl-\`）
 
-4. 设置 emacs locale 环境变量
+4. 设置 emacs locale 环境变量:
 
 	```shell
 	alias emacs="LC_CTYPE=zh_CN.UTF8 emacs"
 	```
-5. 如果在 emacs 中可以调出 fcitx 输入框，但文字不能正确上屏，则需要确认 locale 是否包含 `zh_CN.UTF-8`
+	
+5. 如果在 emacs 中可以调出 fcitx 输入框，但文字不能正确上屏，则需要确认是否包含zh_CN.UTF-8
 
-	```shell
+	```
 	locale -a
 	```
 	

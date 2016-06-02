@@ -15,4 +15,6 @@ url: "http://larryzju.github.io" # the base hostname & protocol for your site
 github_username:  larryzju
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+
+
