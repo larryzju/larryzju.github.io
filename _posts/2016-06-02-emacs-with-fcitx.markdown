@@ -1,5 +1,5 @@
 ---
-title: emacs 使用 fcitx 输入法配置备忘
+title: Emacs 使用 fcitx 输入法配置备忘
 layout: post
 categories: tools
 ---
