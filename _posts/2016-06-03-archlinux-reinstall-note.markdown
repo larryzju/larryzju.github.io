@@ -59,27 +59,27 @@ boot
 * 添加普通用户
 * 安装图形化界面，习惯使用 xfce4：
 
-	```shell
-	pacman -S sudo xorg xorg-apps xorg-server xf86-video-intel lightdm-gtk-greeter xfce4 xfce4-goodies chromium fcitx-im fcitx-configtool
-	```
+  ```bash
+  pacman -S sudo xorg xorg-apps xorg-server xf86-video-intel lightdm-gtk-greeter xfce4 xfce4-goodies chromium fcitx-im fcitx-configtool
+  ```
 	
 * 启动图形界面
 
-	```shell
-	systemctl start lightdm
-	```
+  ```bash
+  systemctl start lightdm
+  ```
 	
 * 安装中文字体和编辑器
 
-	```shell
-	pacman -S community/wqy-microhei community/wqy-zenhei community/wqy-microhei-lite community/wqy-bitmapfont noto-fonts-clj vim emacs
-	```
+  ```bash
+  pacman -S community/wqy-microhei community/wqy-zenhei community/wqy-microhei-lite community/wqy-bitmapfont noto-fonts-clj vim emacs
+  ```
 
 * 安装基本开发环境
 
-	```shell
-	pacman -S base-devel
-	```
+  ```shell
+  pacman -S base-devel
+  ```
 	
 # 后记
 
