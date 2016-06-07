@@ -22,7 +22,7 @@ layout: post
 
 ## 引导安装过程
 
-重启进入 grub2 界面，按 `c` 进入命令输入窗口，输入以下命令（注意将 isofile 和 /dev/sda5 替换为自己机器的路程，前者为 iso 文件在分区下的路径，/dev/sda1 为存放 iso 文件的块文件路径）
+重启进入 grub2 界面，按 `c` 进入命令输入窗口，输入以下命令（注意将 isofile 和 /dev/sda5 替换为自己机器的路程，前者为 iso 文件在分区下的路径，/dev/sda5 为存放 iso 文件的块文件路径）
 
 ```grub
 set root=(hd0,msdos5)
@@ -66,7 +66,7 @@ boot
 * 启动图形界面
 
   ```bash
-  systemctl start lightdm
+  systemctl enable lightdm; systemctl start lightdm
   ```
 	
 * 安装中文字体和编辑器
