@@ -74,6 +74,8 @@ tag: 快学scala题解
 5. 代码如下，其中 `name` 为 `JavaBeans` 属性，`id` 为正常 scala 属性
 
    ```scala
+   import scala.reflect.BeanProperty
+   
    class Student {
      @BeanProperty var name: String = "";
 	 var id: Long = 0
