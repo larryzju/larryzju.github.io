@@ -1,6 +1,5 @@
 ---
 title: Archlinux 安装备忘
-categories: linux
 layout: post
 ---
 

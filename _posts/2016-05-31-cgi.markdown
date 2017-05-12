@@ -1,7 +1,6 @@
 ---
 title: CGI 与 FastCGI 备忘
 layout: post
-categories: technology,note
 ---
 
 # 概述
