@@ -1,7 +1,6 @@
 ---
 title: Clojure For The Brave And True 读后记
 layout: post
-categories: Clojure
 tag: 读后记
 ---
 

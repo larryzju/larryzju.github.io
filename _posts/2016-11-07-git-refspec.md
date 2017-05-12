@@ -1,6 +1,5 @@
 ---
 title: GIT REFSPEC 重名问题解决小记
-categories: 笔记
 layout: post
 ---
 

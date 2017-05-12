@@ -1,7 +1,6 @@
 ---
 title: 《快学scala》 题解（第6章）
 layout: post
-categories: scala
 tag: 快学scala题解
 ---
 

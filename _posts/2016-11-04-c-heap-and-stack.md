@@ -1,7 +1,6 @@
 ---
 title: C语言中的堆与栈
 layout: post
-categories: note,c
 ---
 
 # 引子
