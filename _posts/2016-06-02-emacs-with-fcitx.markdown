@@ -1,6 +1,7 @@
 ---
 title: Emacs 使用 fcitx 输入法配置备忘
 layout: post
+tag: 计算机
 ---
 
 习惯用 Emacs 用来写一些笔记，但五笔输入法( By Yuwen Dai )用起来不是很顺手，还是 fcitx 更好用一些。

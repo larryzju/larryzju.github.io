@@ -1,6 +1,7 @@
 ---
 title: windows 安装小记
 layout: post
+tag: 计算机
 ---
 
 今天很难得的不加班。忽然很怀念帝国时代II，可惜手头没有 windows 系统，安装之。

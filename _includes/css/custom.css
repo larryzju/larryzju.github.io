@@ -1,0 +1,11 @@
+#tags li {
+	list-style-type: none;
+}
+
+#links {
+	margin-top: 80px;
+}
+
+#links li {
+	list-style-type: none;
+}

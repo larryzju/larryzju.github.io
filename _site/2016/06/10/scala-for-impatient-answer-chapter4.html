@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>larryzju 的博客 - 《快学scala》 题解（第4章）</title>
+  <meta name="author" content="larryzju 的博客" />
+  <meta name="description" content="The blog of larryzju 的博客" />
+  <link rel="canonical" href="http://localhost:4000/2016/06/10/scala-for-impatient-answer-chapter4.html" />
+
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="alternate" type="application/atom+xml" title="larryzju 的博客" href="http://localhost:4000/atom.xml" />
+
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="four columns sidebar">
+      <nav>
+  <a href="/">
+    
+    <img class='width: 100px' src="/logo.png" id="logo" alt="Blog logo"/>
+    
+  </a>
+
+  <h2><a href="/">larryzju 的博客</a></h2>
+
+  <div id="links">
+    <h3>Links</h3>
+<ul>
+  <li><a href="https://larryzju.github.io/diary/index.html">笔记 (gitpage)</a></li>
+  <li><a href="https://github.com/larryzju/diary">笔记源码</a></li>
+</ul>
+
+  </div>
+
+  <div id="tags">
+    <h3>Tags</h3>
+
+
+<ul>
+  
+  <li>
+    <a href="/tag/快学scala题解.html" rel="tag">
+      <span class="tag-id">快学scala题解</span>
+      <span class="tag-count">7</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/tag/杂记.html" rel="tag">
+      <span class="tag-id">杂记</span>
+      <span class="tag-count">11</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/tag/计算机.html" rel="tag">
+      <span class="tag-id">计算机</span>
+      <span class="tag-count">15</span>
+    </a>
+  </li>
+  
+</ul>
+
+  </div>
+
+  <div id="social">
+    Follow me:
+<div id="stalker">
+  
+  <a title="larryzju on Github" href="https://github.com/larryzju">
+    <i class="fa fa-github-square"></i>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <a title="Atom feed" id="atom" href="/atom.xml">
+    <i class="fa fa-rss-square"></i>
+  </a>
+  
+</div>
+
+  </div>
+
+</nav>
+
+    </div>
+
+    <div class="eleven columns content">
+      <p class="meta">
+  June 10, 2016
+  <a href="/">
+    <i class="home fa fa-home"></i>
+  </a>
+</p>
+
+<h1 class="title">《快学scala》 题解（第4章）</h1>
+
+<div id="post">
+  <ol>
+  <li>
+    <p>代码如下</p>
+
+    <pre><code class="language-scala">val equipment_i_want = Map(
+  "Kindle Oasis" -&gt; 2499,
+  "Macbook Pro"  -&gt; 12800,
+  "violin"       -&gt; 3200
+)
+   
+val discount_equipment = for ((k,v) &lt;- equipment_i_want) yield(k,v*.9)
+println( discount_equipment )
+</code></pre>
+  </li>
+  <li>
+    <p>代码如下</p>
+
+    <pre><code class="language-scala">val in = new java.util.Scanner( new java.io.File( "/tmp/pep-3136.txt" ) )
+val s  = new scala.collection.mutable.HashMap[String,Int]
+while( in.hasNext() ) {
+  val word = in.next()
+  s.update( word, s.getOrElse( word, 0 ) + 1 )
+}
+println(s)
+</code></pre>
+  </li>
+  <li>
+    <p>代码如下</p>
+
+    <pre><code class="language-scala">val in = new java.util.Scanner( new java.io.File( "/tmp/pep-3136.txt" ) )
+val s  = new scala.collection.immutable.HashMap[String,Int]
+while( in.hasNext ) {
+  val word = in.next
+  s = s + ((word, s.getOrElse( word, 0 ) + 1))
+}
+println(s)
+</code></pre>
+  </li>
+  <li>
+    <p>同上，将 <code>HashMap</code> 替换为 <code>TreeMap</code></p>
+
+    <pre><code class="language-scala">val in = new java.util.Scanner( new java.io.File( "/tmp/pep-3136.txt" ) )
+val s  = new scala.collection.immutable.TreeMap[String,Int]
+while( in.hasNext ) {
+  val word = in.next
+  s = s + ((word, s.getOrElse( word, 0 ) + 1))
+}
+println(s)
+</code></pre>
+  </li>
+  <li>
+    <p>如下，scala 中没有可变的 <code>TreeMap</code>，无法保证其顺序</p>
+
+    <pre><code class="language-scala">import scala.collection.JavaConversions._
+   
+val in = new java.util.Scanner( new java.io.File( "/tmp/pep-3136.txt" ) )
+val s: scala.collection.mutable.Map[String,Int]  = new java.util.TreeMap[String,Int]
+while( in.hasNext() ) {
+  val word = in.next()
+  s.update( word, s.getOrElse( word, 0 ) + 1 )
+}
+println(s)
+</code></pre>
+  </li>
+  <li>
+    <p>代码如下</p>
+
+    <pre><code class="language-scala">val h = new scala.collection.mutable.LinkedHashMap[String,Int]
+h += ("Monday" -&gt; java.util.Calendar.MONDAY);   println( h )
+h += ("Tuseday"-&gt; java.util.Calendar.TUESDAY);  pritnln( h )
+h += ("Sunday" -&gt; java.util.Calendar.SUNDAY);   println( h )
+</code></pre>
+  </li>
+  <li>
+    <p>代码如下</p>
+
+    <pre><code class="language-scala">val props = System.getProperties
+val fmt = "%%-%ds | %%s\n".format( props.map( _._1.length ).max + 3 )
+for ( (k,v) &lt;- props ) { printf( fmt,k,v) }
+</code></pre>
+  </li>
+  <li>
+    <p>函数如下</p>
+
+    <pre><code class="language-scala">def minmax( values: Array[Int] ): Tuple2[Int,Int] = {
+  (values.min, values.max)
+}
+</code></pre>
+  </li>
+  <li>
+    <p>函数如下</p>
+
+    <pre><code class="language-scala">def lteqgt( values: Array[Int], v: Int ): Tuple3[ Int, Int, Int ] = {
+  val lt = values.filter( _ &lt; v ).size
+  val eq = values.filter( _ == v ).size
+  ( lt, eq, values.size - lt - eq )
+}
+</code></pre>
+  </li>
+  <li>
+    <p>将会生成 <code>((H,W), (e,o), (l,r,), (l,l), (o,d))</code> 的 <code>Vector</code> 对象。<code>zip</code> 的作用是拼接两个序列中的每对元素（按最小长度），形成一个 Pair 的列表</p>
+  </li>
+</ol>
+
+</div>
+
+<div id="related">
+  <h3>Related Posts</h3>
+  <ul class="posts">
+    
+    <li>
+      <span>28 Jun 2017 &raquo;</span> <a href="/2017/06/28/grub2-windows.html">windows 安装小记</a>
+    </li>
+    
+    <li>
+      <span>21 Jun 2017 &raquo;</span> <a href="/2017/06/21/%E6%96%B0%E4%B8%9C%E6%96%B9%E5%BF%AB%E8%BD%A6%E8%B0%8B%E6%9D%80%E6%A1%88.html">《新东方快车谋杀案》观后记</a>
+    </li>
+    
+    <li>
+      <span>17 Jun 2017 &raquo;</span> <a href="/2017/06/17/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4.html">《恰同学少年》读后记</a>
+    </li>
+    
+  </ul>
+
+  <h3>Tags :</h3>
+  <span>
+    
+      <a href="/tag/快学scala题解.html" rel="tag"> 
+         快学scala题解 
+        
+          ,
+        
+      </a>
+
+      <a href="/tag/计算机.html" rel="tag"> 
+         计算机 
+        
+        .
+        
+      </a>
+
+  </span>
+</div>
+
+
+
+      <div class="footer">
+        <div class="disclaimer">
+  
+  <p>
+  唯学无际，际于天地
+  </p>
+  
+
+  <p>
+    © larryzju 的博客, 2017 &mdash; built with <a href="http://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/swanson/lagom">Lagom theme</a>
+  </p>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

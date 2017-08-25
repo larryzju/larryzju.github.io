@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>larryzju 的博客 - GIT REFSPEC 重名问题解决小记</title>
+  <meta name="author" content="larryzju 的博客" />
+  <meta name="description" content="The blog of larryzju 的博客" />
+  <link rel="canonical" href="http://localhost:4000/2016/11/07/git-refspec.html" />
+
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="alternate" type="application/atom+xml" title="larryzju 的博客" href="http://localhost:4000/atom.xml" />
+
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="four columns sidebar">
+      <nav>
+  <a href="/">
+    
+    <img class='width: 100px' src="/logo.png" id="logo" alt="Blog logo"/>
+    
+  </a>
+
+  <h2><a href="/">larryzju 的博客</a></h2>
+
+  <div id="links">
+    <h3>Links</h3>
+<ul>
+  <li><a href="https://larryzju.github.io/diary/index.html">笔记 (gitpage)</a></li>
+  <li><a href="https://github.com/larryzju/diary">笔记源码</a></li>
+</ul>
+
+  </div>
+
+  <div id="tags">
+    <h3>Tags</h3>
+
+
+<ul>
+  
+  <li>
+    <a href="/tag/快学scala题解.html" rel="tag">
+      <span class="tag-id">快学scala题解</span>
+      <span class="tag-count">7</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/tag/杂记.html" rel="tag">
+      <span class="tag-id">杂记</span>
+      <span class="tag-count">11</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/tag/计算机.html" rel="tag">
+      <span class="tag-id">计算机</span>
+      <span class="tag-count">15</span>
+    </a>
+  </li>
+  
+</ul>
+
+  </div>
+
+  <div id="social">
+    Follow me:
+<div id="stalker">
+  
+  <a title="larryzju on Github" href="https://github.com/larryzju">
+    <i class="fa fa-github-square"></i>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <a title="Atom feed" id="atom" href="/atom.xml">
+    <i class="fa fa-rss-square"></i>
+  </a>
+  
+</div>
+
+  </div>
+
+</nav>
+
+    </div>
+
+    <div class="eleven columns content">
+      <p class="meta">
+  November 07, 2016
+  <a href="/">
+    <i class="home fa fa-home"></i>
+  </a>
+</p>
+
+<h1 class="title">GIT REFSPEC 重名问题解决小记</h1>
+
+<div id="post">
+  <h1 id="原因">原因</h1>
+
+<p>有个远端仓库版本管理混乱，计划以后按照<a href="https://www.oschina.net/translate/a-successful-git-branching-model">这个模式</a>（<a href="http://nvie.com/posts/a-successful-git-branching-model/">原文</a>）来管理版本。</p>
+
+<p>现在的版本中同时有 v0.2.x 分支和 v0.2.x tag，当我们试图删除 v0.2.x 分支，git 回答无法完成操作。</p>
+
+<pre><code class="language-shell">git push origin v0.2.x --delete
+&gt; error: dst refspec v0.2.x matches more than one.
+</code></pre>
+
+<h1 id="研究过程">研究过程</h1>
+
+<p>最权威的莫过于自带的 manual 手册</p>
+
+<h2 id="git-push1">git-push(1)</h2>
+
+<p><code>man 1 git-push</code> 手册中讲到了 <code>&lt;refspec&gt;</code> 的规则：<code>[+]&lt;src-obj&gt;:&lt;dst-ref&gt;</code>，其中：</p>
+
+<ul>
+  <li><code>src-obj</code> 是提交的标识（或者分支），如 <code>HEAD</code>，<code>master~4</code></li>
+  <li><code>dst-ref</code> 是远端要被推送到的 ref（引用）</li>
+  <li><code>dst-ref</code> 为空时，使用 <code>src-obj</code> 同名的 ref</li>
+  <li><code>src-ref</code> 为空时，则是删除远端的 <code>dst-ref</code></li>
+</ul>
+
+<p>所以删除远端分支的语法应该是写作 <code>git push origin :v0.2.x</code>，嗯，比诡异的 <code>push --delete</code> 语法看起来好理解一些。</p>
+
+<p>不过我们的问题还没有解决，如果有同名的 <code>dst-ref</code> 如何解决，<code>ref</code> 按什么规则书写，如何查看？</p>
+
+<h2 id="gitrevisions7">gitrevisions(7)</h2>
+
+<p>其中 <strong>SPECIFYING REVISIONS</strong> 一节中完整的解释了 <code>&lt;refname&gt;</code> 的表示，下面是我自己的理解。</p>
+
+<ul>
+  <li>refname 是一个到 commit 的引用名称，方便记忆</li>
+  <li>refname 的完整表示为 <code>refs/xxx/&lt;refname&gt;</code> 这样一个层级名称</li>
+  <li>我们通常用的 <code>HEAD</code>，<code>FFETCH_HEAD</code> 和 <code>ORIG_HEAD</code> 等实际上是特殊的别名（类似 shell 里的 alias）</li>
+  <li>一般情况我们并不使用完整的 <code>refs/heads/master</code> 名称，而只用 <code>master</code>，git 会匹配出完整的 refname。但有歧义时会提醒我们（就是本文开始遇到的问题）</li>
+</ul>
+
+<p>这里不精确的类比一下</p>
+
+<ol>
+  <li>版本库： git 管理的每次提交对象由 sha1 来标识，通过快照保存提交的内容</li>
+  <li>元数据： git 提供的丰富的功能，如分支、tag等，实际上是包含了指向一次提交的元信息</li>
+</ol>
+
+<p>手册中解释了 git 如何来匹配 refname 的全名，实质上在 <code>.git</code> 目录下，我们就能看到这些文件，文件的内容正是指向提交的 sha1 串</p>
+
+<pre><code>.git/HEAD
+.git/refs/heads/master
+.git/refs/heads/v0.2.x
+.git/refs/tags/v0.2.x
+.git/refs/remotes/origin/master
+...
+</code></pre>
+
+<h1 id="解决方法">解决方法</h1>
+
+<p>到这里我们的问题就很好解决了：只需要用完整的 refname 进行操作就行：</p>
+
+<pre><code class="language-shell">git push origin :refs/tags/v0.2.x 
+</code></pre>
+
+<h1 id="总结">总结</h1>
+
+<ul>
+  <li>refname 是表示分支、HEAD、TAG 的易读的别名</li>
+  <li>一般无需输入完整的 refname 名称，git 会自动匹配</li>
+  <li>如果出现多个 refname 重名，则需要输入完整的 refname</li>
+  <li>git push 是将本地的一个提交推送到远端，删除只是其没有本地提交的一个特例</li>
+</ul>
+
+<h1 id="参考资料">参考资料</h1>
+
+<ul>
+  <li><a href="https://www.kernel.org/pub/software/scm/git/docs/git-fetch.html">man git-fetch</a></li>
+  <li><a href="https://www.oschina.net/translate/a-successful-git-branching-model">介绍一个成功的 Git 分支模型</a></li>
+  <li><a href="http://nvie.com/posts/a-successful-git-branching-model/">A successful Git branching model</a></li>
+</ul>
+
+
+</div>
+
+<div id="related">
+  <h3>Related Posts</h3>
+  <ul class="posts">
+    
+    <li>
+      <span>28 Jun 2017 &raquo;</span> <a href="/2017/06/28/grub2-windows.html">windows 安装小记</a>
+    </li>
+    
+    <li>
+      <span>21 Jun 2017 &raquo;</span> <a href="/2017/06/21/%E6%96%B0%E4%B8%9C%E6%96%B9%E5%BF%AB%E8%BD%A6%E8%B0%8B%E6%9D%80%E6%A1%88.html">《新东方快车谋杀案》观后记</a>
+    </li>
+    
+    <li>
+      <span>17 Jun 2017 &raquo;</span> <a href="/2017/06/17/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4.html">《恰同学少年》读后记</a>
+    </li>
+    
+  </ul>
+
+  <h3>Tags :</h3>
+  <span>
+    
+      <a href="/tag/计算机.html" rel="tag"> 
+         计算机 
+        
+        .
+        
+      </a>
+
+  </span>
+</div>
+
+
+
+      <div class="footer">
+        <div class="disclaimer">
+  
+  <p>
+  唯学无际，际于天地
+  </p>
+  
+
+  <p>
+    © larryzju 的博客, 2017 &mdash; built with <a href="http://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/swanson/lagom">Lagom theme</a>
+  </p>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

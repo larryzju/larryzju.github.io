@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>larryzju 的博客 - Go 语言初印象</title>
+  <meta name="author" content="larryzju 的博客" />
+  <meta name="description" content="The blog of larryzju 的博客" />
+  <link rel="canonical" href="http://localhost:4000/2017/03/27/golang.html" />
+
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="/favicon.png">
+  <link rel="alternate" type="application/atom+xml" title="larryzju 的博客" href="http://localhost:4000/atom.xml" />
+
+  <link rel="stylesheet" href="/assets/css/all.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="four columns sidebar">
+      <nav>
+  <a href="/">
+    
+    <img class='width: 100px' src="/logo.png" id="logo" alt="Blog logo"/>
+    
+  </a>
+
+  <h2><a href="/">larryzju 的博客</a></h2>
+
+  <div id="links">
+    <h3>Links</h3>
+<ul>
+  <li><a href="https://larryzju.github.io/diary/index.html">笔记 (gitpage)</a></li>
+  <li><a href="https://github.com/larryzju/diary">笔记源码</a></li>
+</ul>
+
+  </div>
+
+  <div id="tags">
+    <h3>Tags</h3>
+
+
+<ul>
+  
+  <li>
+    <a href="/tag/快学scala题解.html" rel="tag">
+      <span class="tag-id">快学scala题解</span>
+      <span class="tag-count">7</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/tag/杂记.html" rel="tag">
+      <span class="tag-id">杂记</span>
+      <span class="tag-count">11</span>
+    </a>
+  </li>
+  
+  <li>
+    <a href="/tag/计算机.html" rel="tag">
+      <span class="tag-id">计算机</span>
+      <span class="tag-count">15</span>
+    </a>
+  </li>
+  
+</ul>
+
+  </div>
+
+  <div id="social">
+    Follow me:
+<div id="stalker">
+  
+  <a title="larryzju on Github" href="https://github.com/larryzju">
+    <i class="fa fa-github-square"></i>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <a title="Atom feed" id="atom" href="/atom.xml">
+    <i class="fa fa-rss-square"></i>
+  </a>
+  
+</div>
+
+  </div>
+
+</nav>
+
+    </div>
+
+    <div class="eleven columns content">
+      <p class="meta">
+  March 27, 2017
+  <a href="/">
+    <i class="home fa fa-home"></i>
+  </a>
+</p>
+
+<h1 class="title">Go 语言初印象</h1>
+
+<div id="post">
+  <h1 id="前言">前言</h1>
+
+<p>最近决定开始学习 go 语言，有以下原因：</p>
+
+<ul>
+  <li>对 go 语言慕名已久，关注过各个论坛或是博客上关于 go 的正面和负面的评价。</li>
+  <li>最近 go, rust, swift 等编译语言比较流行，go 相对简单</li>
+  <li>工作实践中对 python, cojure 等动态类型语言又爱又恨</li>
+  <li>需要有一个系统级别的语言，来降低 c 开发的难度</li>
+  <li>学习语言并学习其解决问题之道有助于扩展思路</li>
+  <li>有趣</li>
+</ul>
+
+<h1 id="教程">教程</h1>
+
+<p>入门教材我选择了这么几本：</p>
+
+<ol>
+  <li><a href="https://miek.nl/go/">learning-go</a></li>
+  <li><a href="https://golang.org/doc/code.html">How to write Go Code</a></li>
+  <li><a href="https://tour.golang.org/">A Tour of Go</a></li>
+  <li>（进行中）The Go Programming Laugnage ( Alan A.A. Donovan, Brian W. Kernighan )</li>
+</ol>
+
+<h1 id="感受">感受</h1>
+
+<h2 id="与-python-的比较">与 python 的比较</h2>
+
+<ul>
+  <li>go 的语法要求比较严格，作为保护无可厚非，但不习惯</li>
+  <li>标准库不如 python 丰富，竟然没有官方的 set</li>
+  <li>在工作环境（不能上网）中，go get 比较麻烦，虽然 pip 可能也不简单</li>
+  <li>缺少通用函数支持，甚至没有通用的 max 函数</li>
+  <li>缺少 python 的 list comprehension</li>
+  <li>缺少 python 的 yield 和迭代器生成语法</li>
+  <li>使用第三方包时，版本管理比较简陋</li>
+  <li>文件操作、字符串操作不方便</li>
+  <li>没有异常机制，导致代码中大量的返回 error 检查</li>
+  <li>缺少完整的元编程，不能重载操作符</li>
+  <li>基本类型和自定义类型区别比较明显，比如在 dict 中不能以自定义类型作主键</li>
+</ul>
+
+<h2 id="与-c-的比较">与 c 的比较</h2>
+
+<ul>
+  <li>没有像 c 一样的指针操作</li>
+  <li>不用手动内存管理，比 c 愉快得多</li>
+  <li>不用作原型声明</li>
+  <li>自带工具集简化了开发环境，vim 加插件暂时足够开发之用</li>
+  <li>可以多返回值</li>
+  <li>多了 dict 内置类型</li>
+  <li>手册比 c manual 优秀</li>
+  <li>代码和 c 的风格接近</li>
+</ul>
+
+<h1 id="问题">问题</h1>
+
+<ul>
+  <li>array 与 slices 的区别，特别是字面量表示</li>
+  <li>go 是按值来传递参数的，那么在何种情况下需要使用指针来避免拷贝性能损失</li>
+  <li>如何高效使用 goroutine 来编写并发程序</li>
+  <li>cgo 使用的细节</li>
+  <li>interface 与泛型</li>
+</ul>
+
+<h1 id="总结">总结</h1>
+
+<ul>
+  <li>期望 go 完全替代 python 不现实，go 有自己的编程风格和范式</li>
+  <li>有些先入为主的思路，让我们对 go 的一些设计有疑虑</li>
+  <li>现在的一些问题可能是因为对 go 理解不够</li>
+  <li>还需要继续深入学习，从优秀代码吸收经验</li>
+</ul>
+
+
+</div>
+
+<div id="related">
+  <h3>Related Posts</h3>
+  <ul class="posts">
+    
+    <li>
+      <span>28 Jun 2017 &raquo;</span> <a href="/2017/06/28/grub2-windows.html">windows 安装小记</a>
+    </li>
+    
+    <li>
+      <span>21 Jun 2017 &raquo;</span> <a href="/2017/06/21/%E6%96%B0%E4%B8%9C%E6%96%B9%E5%BF%AB%E8%BD%A6%E8%B0%8B%E6%9D%80%E6%A1%88.html">《新东方快车谋杀案》观后记</a>
+    </li>
+    
+    <li>
+      <span>17 Jun 2017 &raquo;</span> <a href="/2017/06/17/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4.html">《恰同学少年》读后记</a>
+    </li>
+    
+  </ul>
+
+  <h3>Tags :</h3>
+  <span>
+    
+      <a href="/tag/计算机.html" rel="tag"> 
+         计算机 
+        
+        .
+        
+      </a>
+
+  </span>
+</div>
+
+
+
+      <div class="footer">
+        <div class="disclaimer">
+  
+  <p>
+  唯学无际，际于天地
+  </p>
+  
+
+  <p>
+    © larryzju 的博客, 2017 &mdash; built with <a href="http://jekyllrb.com/">Jekyll</a> using <a href="https://github.com/swanson/lagom">Lagom theme</a>
+  </p>
+</div>
+
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

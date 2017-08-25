@@ -1,7 +1,7 @@
 ---
 title: 《快学scala》 题解（第1章）
 layout: post
-tag: 快学scala题解
+tags: 快学scala题解 计算机
 ---
 
 

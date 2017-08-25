@@ -1,7 +1,7 @@
 ---
 title: 《快学scala》 题解（第7章）
 layout: post
-tag: 快学scala题解
+tags: 快学scala题解 计算机
 ---
 
 1. 两者的不同之处在于可见性的不同，例如第一种导入方式下 `Constant` 不可见

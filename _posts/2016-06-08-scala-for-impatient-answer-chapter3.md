@@ -1,7 +1,7 @@
 ---
 title: 《快学scala》 题解（第3章）
 layout: post
-tag: 快学scala题解
+tags: 快学scala题解 计算机
 ---
 
 1. 代码如下

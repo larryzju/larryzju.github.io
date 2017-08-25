@@ -1,0 +1,13 @@
+<h3>Tags</h3>
+{% assign sorted_tags = site.tags | sort %}
+
+<ul>
+  {% for tag in sorted_tags %}
+  <li>
+    <a href="{{ '/tag/' | append:tag[0] }}.html" rel="tag">
+      <span class="tag-id">{{tag[0]}}</span>
+      <span class="tag-count">{{tag[1].size}}</span>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

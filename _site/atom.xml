@@ -1,0 +1,2585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>The blog of larryzju 的博客</title>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000"/>
+ <updated>2017-08-25T10:51:03+08:00</updated>
+ <id>http://localhost:4000</id>
+ <author>
+   <name>larryzju 的博客</name>
+   <email>larryzju@163.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>windows 安装小记</title>
+   <link href="http://localhost:4000/2017/06/28/grub2-windows.html"/>
+   <updated>2017-06-28T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/06/28/grub2-windows</id>
+   <content type="html">&lt;p&gt;今天很难得的不加班。忽然很怀念帝国时代II，可惜手头没有 windows 系统，安装之。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;机器使用我的一台 24G SSD 盘无风扇主机，之前安装 linuxmint&lt;/li&gt;
+  &lt;li&gt;插上 120GB 的笔记本退下来的硬盘，作双系统&lt;/li&gt;
+  &lt;li&gt;下载 win8pe 维护工具盘镜像（ISO），复制到 /boot 目录下&lt;/li&gt;
+  &lt;li&gt;安装 syslinux，提取 &lt;code&gt;/usr/lib/syslinux/memdisk&lt;/code&gt; 到 /boot 目录下&lt;/li&gt;
+  &lt;li&gt;重启进入 grub 界面（启动时按 &lt;code&gt;esc&lt;/code&gt; 键）&lt;/li&gt;
+  &lt;li&gt;指定 grub 加载 iso 镜像
+    &lt;pre&gt;&lt;code&gt;set root=(hd0,msdos1)
+linux16 /boot/memdisk iso raw
+initrd16 /boot/win8pe.iso
+boot
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;引导入 winpe 界面，使用工具，如 ghost 等安装系统&lt;/li&gt;
+  &lt;li&gt;在 linux 中，使用 &lt;code&gt;grub-mkconfig&lt;/code&gt; 生成配置文件，替换掉 &lt;code&gt;/boot/grub/grub.cfg&lt;/code&gt; 配置&lt;/li&gt;
+  &lt;li&gt;重启，grub 菜单中选择进入 windows&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;之前没少折腾过硬盘安装系统和 U 盘维护工具，无论是 windows 还是 linux，这次安装 windows 相对顺利。还是认为精力不应该浪费把玩工具上，干想干的事，哪怕是娱乐也好。&lt;/p&gt;
+
+&lt;p&gt;AOE2, how do you turn this on?&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《新东方快车谋杀案》观后记</title>
+   <link href="http://localhost:4000/2017/06/21/%E6%96%B0%E4%B8%9C%E6%96%B9%E5%BF%AB%E8%BD%A6%E8%B0%8B%E6%9D%80%E6%A1%88.html"/>
+   <updated>2017-06-21T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/06/21/新东方快车谋杀案</id>
+   <content type="html">&lt;p&gt;受福尔摩斯和柯南等经典形象的影响，提到侦探，我容易联想到的是智力超群，颇有些神经质，可能在生活中邋遢颓废且情商不高，还可能在科学技术和理性思考能力上有特殊能力，不会为经典的方法论和世俗的教条所约束的怪人。但是波罗则有所不同，并不神经质，而且一脸严肃认真、留着一丝不苟的胡子。既刻板（从他需要有两个一样大小的鸡蛋作早餐以及睡前把珠串码放的整整齐齐可见一斑）又笃信宗教（电影中特意把他与唯一的恶人祈祷做了对比）。因此侦探中，波罗对我的吸引力小很多，显得太过中正，而不接地气。&lt;/p&gt;
+
+&lt;p&gt;侦探故事吸引人的一个重要原因是我们喜欢作智力游戏。通过与故事中的线索和分析同步前近，我们往往会产生一种超脱其外上帝视角的幻觉，以及在智力上碾压旁人的喜悦感。这种喜悦并不真实。就我有限的认识，真正的侦破并不如想的那样天马行空、一泄千里。恐怕更多时间在呆板的收集线索，排查摸底的基础工作。追求智力上的优越性的犯罪恐怕也并非主流，我们恐怕不能把犯罪当成一个理性的东西来看待。&lt;/p&gt;
+
+&lt;p&gt;这部电影智力上的因素并不突出（可能是看过了太多的侦探演译），更多地给我印象是其关于“正义和法制”的讨论。很容易让我联想到《十二怒汉》和《蝙蝠侠》，这是典型的套路，其它套路还有诸如感性与理性，利益与更大的利益，公平与效率，民主与自由。无不是对我们理想主义与现实主义的一种挑战。波罗破案是正义，复仇却不是；法网恢恢而疏，看不到现世报应的可能时我们又能如何？&lt;/p&gt;
+
+&lt;p&gt;十二个人的联合犯罪并不巧妙，只能说过度设计。他们并不只是单纯的为了正义，更有一种情绪的发泄在其中。当然也对公正无从获得的无可奈何。最后镜头移到等待波罗决定是否向警察说出真相的一刻，我就可以原谅这十二个人自诩的正义了。他们并没有试图反抗，而是在静待命运的宣判，愿意为自己所做承担后果。&lt;/p&gt;
+
+&lt;p&gt;波罗放弃自己坚持的正确，自开篇就有铺垫，不难猜测。但我想法外容情也需要有度，过度的特例只会成为惯例。诸如福尔摩斯等形象无不以正直、寻求真相为己要。也只有像波罗这样的坚持原则的人，只有建立在正义和真相基础上的人情才会有味。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《恰同学少年》读后记</title>
+   <link href="http://localhost:4000/2017/06/17/%E6%81%B0%E5%90%8C%E5%AD%A6%E5%B0%91%E5%B9%B4.html"/>
+   <updated>2017-06-17T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/06/17/恰同学少年</id>
+   <content type="html">&lt;p&gt;将这本书列在书单上有些时间了，但一直没有读下去。记忆中前几年播出过这部电视剧，但对于爱国主义、心灵鸡汤、立志教育等体裁我有一种本能的反感。不是对其内容，而是因为接收了过多的这方面的教育，而与实践脱节，行知无法合一，看得越多越是困惑，因此不愿意多看。脱开上下文谈任何东西都是耍流氓。时代不同，背景不同，伟大人物的少年时候必定是如此卓而不群，与我们现在的蝇营狗苟是如此不可同日而语，我也不确定自己是否有力去接受如此强烈的对比与教育。&lt;/p&gt;
+
+&lt;p&gt;本书倒并非一味地为宣教而宣教，定位似在记录那个时代的少年们的成长，也试图向我们解释为什么他们会走上一条别人都不曾走上的路，是什么驱使他们坚定信心，是什么让他们矢志不渝。虽然其中人物或过于单薄，或缺少成长的过程，或善善恶恶太过明显，也不失为一本讲好故事的书。&lt;/p&gt;
+
+&lt;p&gt;书中有好些熟悉的人名，却不大清楚为何熟悉，如何叔衡、蔡和森、向警予、蔡畅、张自忠、杨开慧等；也有几乎没听过，却使人感到钦佩的长者，他们代表着传统与先行，如孔昭绶、张干、袁六吉、杨昌济、谭延闿；还有些名不见经传，但或许也可以大书特书的的人物，如王子鹏、萧子升等。让人不禁感叹那个时代世界是如此之小，能让这么多名人都在长沙出场。伟大的人物从来不是从石头里蹦出来的，必然有着其成长的环境和影响他的人。&lt;/p&gt;
+
+&lt;p&gt;开国领袖的少年时代，从学校中学到的有两个：一是周恩来为中华崛起而读书，二来是毛泽东“向中流击水，浪扼飞舟”的诗句。但也仅限于此，教科书教给我们的是领袖少年就与众不同，却没有分析出为什么。而我们对尊者的解释与历史中如二，多加以迷信魔幻的解析，好似他们就是代着使命下凡来拯救万名于水火之中一样。伟人一定有伟大的特质，也一定有平凡的特质。认真求学、渴望知识、关心民生疾苦、处大事而不惊、志从高远、有毅力，都是我辈值得学习的精神。师友尊长、成长环境也是助其成功的重要因素，但却不为我等所能复制了。&lt;/p&gt;
+
+&lt;p&gt;不到一百年的时间，从生活环境和国际局势上看起来是如此的巨变；但从人的思想形成和提升修养来看，我们与那时又是如此的相似。事实上，几千年的历史都是如此，我们与前人面临的问题和困惑并没有本质的不同。个人的生存与发展，与超越个体的意识的追求。在我看来，个人修养也罢、更高追求也罢，都是个实打实地磨炼自身的过程，没有捷径可走。我们需要多从前人处吸收经验，但要通过实践与自身相磨合适应。立志当高远，但并不使盲目，以储学修能、知行合一、驱除偏见为要。即使没有天才的智力、体力与经历，也要付之更大的精力与更坚定的毅力。&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《人民的名义》读后感</title>
+   <link href="http://localhost:4000/2017/05/12/%E4%BA%BA%E6%B0%91%E7%9A%84%E5%90%8D%E4%B9%89.html"/>
+   <updated>2017-05-12T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/05/12/人民的名义</id>
+   <content type="html">&lt;p&gt;《人民的名义》电视剧热播，街头巷尾的大人小孩都在议论。开始我并不以为然——因为之前也算看过不少官场小说，自认见识了不少所谓官场文化——但奈何周围探讨的氛围太浓。为了不被剧透，最近抓紧看完了《人民的名义》小说。&lt;/p&gt;
+
+&lt;p&gt;小说几乎可以作为电视剧本，但我还是对电视剧中演员的演技有些好奇。论剧情，我并不认为非常优秀：剧中人物跳反太早太明显。除了高小琴和高小凤双胞胎的设计出乎意料，李达康个性突出且强势、又驭下无方——真不知道他怎样保护自己的羽毛，爱好天文的懒政孙副市长有些黑色幽默。其余人物或正派、或被腐蚀、或老谋深算、或矢志不移、或左右摇摆，算不得有血有肉，过于面孔化，顶多算个典型形象。&lt;/p&gt;
+
+&lt;p&gt;我现在好奇是为什么要定名曰“人民的名义”。模糊记得在小说偏后的位置出现的这句话，是侯亮平大义凛然的说辞，还是高书记“雄辩”之辞。我不怀好意的认为是后者。名义有很多种，法律之名、正义之名、大多数之名等等，但以人民的名义含义丰富。&lt;/p&gt;
+
+&lt;p&gt;正义之名被前人用过头、用滥了。以至于谁人冒天下之大不韪敢自称正义的化身，而不怕被群起攻之（不如叫以月亮的名义来得巧妙）？法律之名好则好哉，但过于匠人气，满满的不解风情。既没有反转，又没有复仇的快感，甚至没有宽恕之后的感人。即使不明确表示，法律总不招人喜欢。我们总会希望看到法场有快马加鞭一骑飞驰而来的“刀下留人”，或是不惜违法替天行道的绿林好汉。相比法不容情之刻板，我们乐于并苦于游弋于法外开恩与法不择众之中，或沾沾自喜、或怨天尤人。&lt;/p&gt;
+
+&lt;p&gt;正义过于自以为是，法律刻板而少灵活，“人民的名义”则不偏不倚。既能激起大家的参与感，又有恰到好处的、看得着摸不到的神秘感。每个人都有自己心中的“人民”，为之奋斗并为之丰富内涵。我们若无力表达自己的意愿，那就不妨通过代表——尽管并没有我们的同意——口中表达。倘若恰好又与些许我们的想法相符，那就谢天谢地，现象级实至名归。&lt;/p&gt;
+
+&lt;p&gt;我想剧中经济犯罪与以权谋私仅仅是要反映的一部分问题，甚至是表层的问题。需要注意到郑西坡诗人终于被半挟持地走上了上访的路，李达康努力维持的经济形势下官生凋蔽。法外容情也罢，钻法律空子也罢，以人民的名义也罢，不可控的权力助我们在刀刃上跳舞，谁都自信自己不会跌下而已。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《海棠依旧》观后记</title>
+   <link href="http://localhost:4000/2017/04/19/%E6%B5%B7%E6%A3%A0%E4%BE%9D%E6%97%A7.html"/>
+   <updated>2017-04-19T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/04/19/海棠依旧</id>
+   <content type="html">&lt;p&gt;陆陆续续地看完了 41 集的电视剧 《海棠依旧》。要不要记些什么？该从什么地方着笔呢？&lt;/p&gt;
+
+&lt;p&gt;对于近现代的历史，我的认识在学习和成长过程中有诸多变化，有红色、有愤青，充斥着怀疑、被欺骗、八卦、同情、不解、反感诸多情绪。而除去一切功利的、有偏见看法，更多的是好奇。我们与那个年代并没有直接的交集，但那个年代与我们的现状、与我们的长辈、与我们从小受到的教育莫不相关——并且无视我们的意愿。甚至我们所想所写的一切，无不受其影响。我们的认识是如何被塑造的？我们将如何超脱这种定势——或者束缚，这才是好奇的根本。而在束缚中找寻自由，其困难可想而知。&lt;/p&gt;
+
+&lt;p&gt;从求知角度，所好奇的在于历史是否真的如教科书上所说的那样——沿着确定不移的路线前进，亦或是唯有如何才有如何云云。在看历史的时候，难免设身处地把自己带入其中，假设任何可能的变化，并扮演故事的走向的变化。越是假设，越是感觉其纷繁复杂而联系万千，完全不是我们在书上看到的确定无无疑的向前，甚至是脆弱的、易变的。时常感叹，或叹息，或沉思，或无语，或焦虑、或感动、或欣慰，种种感情，无不因我们对自己和历史的尊重，总想让历史轨迹再美好一些，让我们尊敬的伟人们伟大的更充分些，让我们的困惑再少些。&lt;/p&gt;
+
+&lt;p&gt;但历史从不能假设，就像我们的生活一样。空想假设就是将对现实的不满归结为过去的自己和别人。自怨自艾或迁怒他人并不能让我们过得更好。因此很多时候，学习历史的主要作用是以史为鉴。&lt;/p&gt;
+
+&lt;p&gt;以史为鉴是一个光明正大而理所当然的理由，我同意这个出发点。但也会不时怀疑：历史终究是人民创造的还是英雄创造的？而谁又能代表人民，集体意志下个人究竟有多少作用？从阴谋和厚黑的眼光看来，历史学习更多生出的的是斗争。&lt;/p&gt;
+
+&lt;p&gt;这部主弦律电视剧是如此的正统，形象完美到虚假。其故事又是如此单调，简直不能被视为历史，最多算是为了故事叙述而作的背景介绍。从中我看不到现实的影子，看不到人民和同志，看不到在当时所处的历史和现实的挣扎。&lt;/p&gt;
+
+&lt;p&gt;但我还是听完了故事。从中我看到的是一个人孤单的前行，看到鞠躬尽瘁，看到的是毫不为己，看到革命友谊。有时候做为或不做为都是被迫的选择，但总算是选择了。&lt;/p&gt;
+
+&lt;p&gt;从开始我也不期望从中掌握历史人物的每个细节。而从别人的讲述中认识一个人是不完整的也是不公平的，只能就事论事而已。而就事论人，虽然偏颇，但也不失为一种主观的、有个性的方式。只要不就人论事，这是我的底线。&lt;/p&gt;
+
+&lt;p&gt;故事看完了，形象还很不丰满。有时候历史的空白给了想象的空间，而我们所希望的就是我们所得到的。&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Go 语言初印象</title>
+   <link href="http://localhost:4000/2017/03/27/golang.html"/>
+   <updated>2017-03-27T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/03/27/golang</id>
+   <content type="html">&lt;h1 id=&quot;前言&quot;&gt;前言&lt;/h1&gt;
+
+&lt;p&gt;最近决定开始学习 go 语言，有以下原因：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;对 go 语言慕名已久，关注过各个论坛或是博客上关于 go 的正面和负面的评价。&lt;/li&gt;
+  &lt;li&gt;最近 go, rust, swift 等编译语言比较流行，go 相对简单&lt;/li&gt;
+  &lt;li&gt;工作实践中对 python, cojure 等动态类型语言又爱又恨&lt;/li&gt;
+  &lt;li&gt;需要有一个系统级别的语言，来降低 c 开发的难度&lt;/li&gt;
+  &lt;li&gt;学习语言并学习其解决问题之道有助于扩展思路&lt;/li&gt;
+  &lt;li&gt;有趣&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;教程&quot;&gt;教程&lt;/h1&gt;
+
+&lt;p&gt;入门教材我选择了这么几本：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;https://miek.nl/go/&quot;&gt;learning-go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://golang.org/doc/code.html&quot;&gt;How to write Go Code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tour.golang.org/&quot;&gt;A Tour of Go&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;（进行中）The Go Programming Laugnage ( Alan A.A. Donovan, Brian W. Kernighan )&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;感受&quot;&gt;感受&lt;/h1&gt;
+
+&lt;h2 id=&quot;与-python-的比较&quot;&gt;与 python 的比较&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;go 的语法要求比较严格，作为保护无可厚非，但不习惯&lt;/li&gt;
+  &lt;li&gt;标准库不如 python 丰富，竟然没有官方的 set&lt;/li&gt;
+  &lt;li&gt;在工作环境（不能上网）中，go get 比较麻烦，虽然 pip 可能也不简单&lt;/li&gt;
+  &lt;li&gt;缺少通用函数支持，甚至没有通用的 max 函数&lt;/li&gt;
+  &lt;li&gt;缺少 python 的 list comprehension&lt;/li&gt;
+  &lt;li&gt;缺少 python 的 yield 和迭代器生成语法&lt;/li&gt;
+  &lt;li&gt;使用第三方包时，版本管理比较简陋&lt;/li&gt;
+  &lt;li&gt;文件操作、字符串操作不方便&lt;/li&gt;
+  &lt;li&gt;没有异常机制，导致代码中大量的返回 error 检查&lt;/li&gt;
+  &lt;li&gt;缺少完整的元编程，不能重载操作符&lt;/li&gt;
+  &lt;li&gt;基本类型和自定义类型区别比较明显，比如在 dict 中不能以自定义类型作主键&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;与-c-的比较&quot;&gt;与 c 的比较&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;没有像 c 一样的指针操作&lt;/li&gt;
+  &lt;li&gt;不用手动内存管理，比 c 愉快得多&lt;/li&gt;
+  &lt;li&gt;不用作原型声明&lt;/li&gt;
+  &lt;li&gt;自带工具集简化了开发环境，vim 加插件暂时足够开发之用&lt;/li&gt;
+  &lt;li&gt;可以多返回值&lt;/li&gt;
+  &lt;li&gt;多了 dict 内置类型&lt;/li&gt;
+  &lt;li&gt;手册比 c manual 优秀&lt;/li&gt;
+  &lt;li&gt;代码和 c 的风格接近&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;问题&quot;&gt;问题&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;array 与 slices 的区别，特别是字面量表示&lt;/li&gt;
+  &lt;li&gt;go 是按值来传递参数的，那么在何种情况下需要使用指针来避免拷贝性能损失&lt;/li&gt;
+  &lt;li&gt;如何高效使用 goroutine 来编写并发程序&lt;/li&gt;
+  &lt;li&gt;cgo 使用的细节&lt;/li&gt;
+  &lt;li&gt;interface 与泛型&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;总结&quot;&gt;总结&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;期望 go 完全替代 python 不现实，go 有自己的编程风格和范式&lt;/li&gt;
+  &lt;li&gt;有些先入为主的思路，让我们对 go 的一些设计有疑虑&lt;/li&gt;
+  &lt;li&gt;现在的一些问题可能是因为对 go 理解不够&lt;/li&gt;
+  &lt;li&gt;还需要继续深入学习，从优秀代码吸收经验&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>攻壳机动队观后感</title>
+   <link href="http://localhost:4000/2017/03/26/%E6%94%BB%E5%A3%B3%E6%9C%BA%E5%8A%A8%E9%98%9F.html"/>
+   <updated>2017-03-26T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/03/26/攻壳机动队</id>
+   <content type="html">&lt;h1 id=&quot;故事梗概&quot;&gt;故事梗概&lt;/h1&gt;
+
+&lt;p&gt;一个几乎被义体替换了全部的探员，和一个几乎没有实体的人工智能，在巨大的政治和国际博弈下，融合为一个新的“生命体”，进入无限广阔的网络世界的故事&lt;/p&gt;
+
+&lt;h1 id=&quot;感受&quot;&gt;感受&lt;/h1&gt;
+
+&lt;p&gt;最大的惊艳在于画风，难以想象的昏暗而多雨的、充满世俗城市街景的、写实的画面，和硬朗的、冰冷的人体的线条。从剧情设计上，我认为即使以当下的技术，也拍不出真人版的更好的效果了。&lt;/p&gt;
+
+&lt;p&gt;故事的里关于人性和存在的细节讨论比整个大剧情更能让人触动。这并不是因为剧情不够优秀，而是整个故事要讨论的问题过于哲学化、过于超前，不是我们任何一个没有身临其境的人，能轻巧的承认自己已经掌握其中真理的问题。&lt;/p&gt;
+
+&lt;p&gt;草雉探员以及众多九科的探员无不利用义体科技来改造自己。大多数人可能会对当自己的存在——当身体的每个部件都不是自己，甚至自己的记忆、未来都是电子脑的存储时——产生一些疑惑。但设身处地的想，只要我们还以一个独立的个体存在里，没人会质疑自己存在的合理性。所以他们隐约疑虑自己的身份的同时，也在不遗余力的追捕傀儡师——另一个没有真实存在为基础的、自认为的“生命体”。&lt;/p&gt;
+
+&lt;p&gt;就这一点想来，我们在平时置疑别人行为的时候，总是以自己或者至少是自以为的普世价值为标准点来出发的。&lt;/p&gt;
+
+&lt;p&gt;再想来，这样的剧情——非主体意识觉醒——是否在历史上重复发生过呢。我想附会点的讲，在智人与尼安德特人同时存在而意识到双方是不同的时刻，在信众遇上异教徙时，在鲁宾逊看到荒岛上的脚印时，在印第安人遇到探险者的时候，在坚信的理论和经验被无情的摧毁时，也许第三类接触时刻。我们总会排斥他方存在的合理性，因为只有这样才能解释我们存在的合理。&lt;/p&gt;
+
+&lt;p&gt;这是另一个基点临近的故事。实际上从中我们看到的有冰冷的机械战车，可以无意识地毁灭博物馆上生命之树的图谱而没有任何的避讳；看到科技工作人员改造后有无数手指、不用眨眼的完成工作。这与机器有什么不同？但又看到人工智能在政治上、军事上、国际形式上大行其道，看到傀儡师在寻求自己与人类无差别的身份、生存、死亡、繁殖的权力，看到草雉在完全义化后可以不惜毁坏肉身而要寻求一个答案。他们与我们又有什么不同？&lt;/p&gt;
+
+&lt;p&gt;我们是在一个圈子里，固执地守着自己的价值观：正确的、错误的、顽固的、开放的。或许只有时间才能让我们摆脱这一圈子而进入下一个圈子。古之视今亦如今之视古。&lt;/p&gt;
+
+&lt;p&gt;傀儡师比我们更了解生命的意义，特别是在拥有我们难以想象的能力后。顽强的活下去，但不止于个体的生存，而会为了适应不断的变化——固然这种变化可能是痛苦的、需要放弃个人的利益得失的——作出变化。不过不是为了变化而变化，一定会有最大的目标，同时也不放弃路上的风景。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Geohash 算法与实现备忘</title>
+   <link href="http://localhost:4000/2017/03/23/geohash.html"/>
+   <updated>2017-03-23T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/03/23/geohash</id>
+   <content type="html">&lt;h1 id=&quot;说明&quot;&gt;说明&lt;/h1&gt;
+
+&lt;p&gt;最近有项目需要使用 geohash 来生成经纬度之间的相临关系。语言选择使用正在学习的 go，库使用 &lt;a href=&quot;https://github.com/mmcloughlin/geohash&quot;&gt;mmcloughlin/geohash&lt;/a&gt; 。&lt;/p&gt;
+
+&lt;p&gt;为了更好学习 go 语言，并且稍微深入的理解 geohash 原理。花了些时间来研究 mmcloughlin 的实现，将算法和语言的实现记录在这里备忘。&lt;/p&gt;
+
+&lt;h1 id=&quot;算法&quot;&gt;算法&lt;/h1&gt;
+
+&lt;h2 id=&quot;基本思想&quot;&gt;基本思想&lt;/h2&gt;
+
+&lt;p&gt;经纬相当于二维的一个坐标，将位置信息表示出来。实际上，因为精度问题，经纬度指向的是一个区域，而非一个点。&lt;/p&gt;
+
+&lt;p&gt;经纬度表示有什么问题呢？我想到的有两个问题：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;使用二维坐标来表示位置，在查询一个区域时比较复杂，需要进行两次过滤&lt;/li&gt;
+  &lt;li&gt;找出中心点周边的 N 个邻近点，这类场景二维坐标处理困难&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Geohash 的思路是将经纬度二维信息编织（interleave）成一个一维信息。并且与二维数据信息一样，有严格的顺序性，这样只需要按顺序就能获取点或点的周边区域。&lt;/p&gt;
+
+&lt;h2 id=&quot;经纬度编码&quot;&gt;经纬度编码&lt;/h2&gt;
+
+&lt;p&gt;经纬度分别是 &lt;code&gt;[-180,180]&lt;/code&gt; 和 &lt;code&gt;[-90,90]&lt;/code&gt; 的度数。这种保存不利于转换成一维信息。所以需要将两个维度表示成标准形式。&lt;/p&gt;
+
+&lt;p&gt;标准形式是转换为对应于整个轴线范围的归一化数值。&lt;/p&gt;
+
+&lt;p&gt;可以这样简单的理解：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;度数的范围形成一个一米长的尺子&lt;/li&gt;
+  &lt;li&gt;点的位置对应在尺子上的一个刻度&lt;/li&gt;
+  &lt;li&gt;计算出刻度对应在尺子上的相对比例&lt;/li&gt;
+  &lt;li&gt;比例以二进制来表示，位数越多，则越精确说明点的位置&lt;/li&gt;
+  &lt;li&gt;无论精度多高，总会产生一定误差，所以实际上描述的是一个中心点加上一个误差范围&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;代码中实现比例直接，以 python 说明&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-python&quot;&gt;lng = (lng + 90.0) / 180.0
+print lng * ( 2 ** 32 )
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;interleave&quot;&gt;interleave&lt;/h2&gt;
+
+&lt;p&gt;经度和纬度已经被编码成 32 位的 bit，在忽略地球是个扁球形，两个维度上的每个字节所表示的长度是相近的。将经度和纬度的字节顺序的交替的编织起来，生成一个 64 位的整数。&lt;/p&gt;
+
+&lt;p&gt;整数在显示或输入上不方便，编码成可见字符比较简单。geohash 使用 32 个可见字符（因为是 &lt;script type=&quot;math/tex&quot;&gt;2^5&lt;/script&gt; ，容易处理 ），来进行编码。&lt;/p&gt;
+
+&lt;p&gt;每个字符表示 5 个 bit，12 个字符可以表示 60 个 bit。经度和纬度的位数都是 30 个字。&lt;/p&gt;
+
+&lt;p&gt;这里代码实现交织的方式值得参考，这里引用如下：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;// Spread out the 32 bits of x into 64 bits, where the bits of x occupy even
+// bit positions.
+func spread(x uint32) uint64 {
+	X := uint64(x)
+	X = (X | (X &amp;lt;&amp;lt; 16)) &amp;amp; 0x0000ffff0000ffff
+	X = (X | (X &amp;lt;&amp;lt; 8)) &amp;amp; 0x00ff00ff00ff00ff
+	X = (X | (X &amp;lt;&amp;lt; 4)) &amp;amp; 0x0f0f0f0f0f0f0f0f
+	X = (X | (X &amp;lt;&amp;lt; 2)) &amp;amp; 0x3333333333333333
+	X = (X | (X &amp;lt;&amp;lt; 1)) &amp;amp; 0x5555555555555555
+	return X
+}
+
+// Interleave the bits of x and y. In the result, x and y occupy even and odd
+// bitlevels, respectively.
+func interleave(x, y uint32) uint64 {
+	return spread(x) | (spread(y) &amp;lt;&amp;lt; 1)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;精度&quot;&gt;精度&lt;/h2&gt;
+
+&lt;p&gt;以 5 个字符来计算，能表达 25 bits。经度在前，纬度在后，因此以 13bit 表示经度，12bit 表示纬度。&lt;/p&gt;
+
+&lt;p&gt;经度的误差为 &lt;script type=&quot;math/tex&quot;&gt;{0.5}^{14} * 360 = 0.02197265625&lt;/script&gt; ，同理纬度的误差为 &lt;script type=&quot;math/tex&quot;&gt;{0.5}^{13} * 180 = 0.02197265625&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;以地球周长约 40000km 约数计算（即每度距离 111km），公里误差是&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;\sqrt{(0.022*0.022) + (0.022*0.022)} * 40000 / 360 = 3.45km&lt;/script&gt;
+
+&lt;h2 id=&quot;相邻&quot;&gt;相邻&lt;/h2&gt;
+
+&lt;p&gt;由于 geohash 有一定的精度，实际上表示的是一个方形区域。但正方形有个问题，是上下左右边距离近于对角距离。因此，为了提取所有相邻区域，需要将东南西北及东南、东北、西南、西北八个相邻区域全部考虑进去&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/mmcloughlin/geohash&quot;&gt;mmcloughlin/geohash&lt;/a&gt; 中的代码引用如下&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-go&quot;&gt;// Neighbors returns a slice of geohash strings that correspond to the provided
+// geohash's neighbors.
+func Neighbors(hash string) []string {
+	box := BoundingBox(hash)
+	lat, lng := box.Center()
+	latDelta := box.MaxLat - box.MinLat
+	lngDelta := box.MaxLng - box.MinLng
+	precision := uint(len(hash))
+	return []string{
+		// N
+		EncodeWithPrecision(lat+latDelta, lng, precision),
+		// NE,
+		EncodeWithPrecision(lat+latDelta, lng+lngDelta, precision),
+		// E,
+		EncodeWithPrecision(lat, lng+lngDelta, precision),
+		// SE,
+		EncodeWithPrecision(lat-latDelta, lng+lngDelta, precision),
+		// S,
+		EncodeWithPrecision(lat-latDelta, lng, precision),
+		// SW,
+		EncodeWithPrecision(lat-latDelta, lng-lngDelta, precision),
+		// W,
+		EncodeWithPrecision(lat, lng-lngDelta, precision),
+		// NW
+		EncodeWithPrecision(lat+latDelta, lng-lngDelta, precision),
+	}
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>世界奇妙物语之最初的一步</title>
+   <link href="http://localhost:4000/2017/03/19/%E4%B8%96%E7%95%8C%E5%A5%87%E5%A6%99%E7%89%A9%E8%AF%AD%E4%B9%8B%E6%9C%80%E5%88%9D%E7%9A%84%E4%B8%80%E6%AD%A5.html"/>
+   <updated>2017-03-19T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/03/19/世界奇妙物语之最初的一步</id>
+   <content type="html">&lt;p&gt;最近越来越感觉想法多多，而行动能力不足。看了这集，我开始认同改变可能从一个小的习惯开始。&lt;/p&gt;
+
+&lt;p&gt;我习惯上把一件事情考虑很久，并且反复认证，确证无误后才敢小心翼翼的去做。虽然很多时候并不耽误事情，而且从中能获取到很多收获，特别锻炼独立解决问题的能力。但更多的时候会给别人——特别是相互关心的人造成一些困惑，给自己的行动以不去立即做的借口，错过很多美好。&lt;/p&gt;
+
+&lt;p&gt;问题在哪里？是在严格的条理和足够的推理下来保证自己不失败，因为失败对于谨慎是可耻的。简单地说，我对失败看的太重。&lt;/p&gt;
+
+&lt;p&gt;拖延可能有各种原因，可能是惰性，可能是能力不足。但与躲避失败相当，则成了一个恶性循环。怕失败，所以迟迟不肯有动手加以操作；而因为拖延，可能原本很好的机会或可能会失败。&lt;/p&gt;
+
+&lt;p&gt;尽管不可能因为一集电视剧改变什么（好吧，我承认这是没有行动能力的体现），但我还是想做些改变，从现在开始。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《球形闪电》读后感</title>
+   <link href="http://localhost:4000/2017/03/11/%E7%90%83%E5%BD%A2%E9%97%AA%E7%94%B5.html"/>
+   <updated>2017-03-11T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/03/11/球形闪电</id>
+   <content type="html">&lt;p&gt;之前读球形闪电已经有些时间了，里面的科幻元素和剧情都忘记得干净。球形闪电大概是看大刘的第一部小说。再看来，觉得剧情的推进和人物性格形成的解释都有些僵硬，苏联情结以及战争的残酷面有些做作。而里面的科幻，如球形闪电（宏电子）的激发、捕获；宏原子的奇特性质、聚变的场景更加让人困惑，远没有当初看时的单纯好奇时的经松（可能是更加关注技术上的细节，阻碍了对美妙物理的感受）。再看这部小说，甚至没有更多的感受，有想法却无没落于纸上。&lt;/p&gt;
+
+&lt;p&gt;最近时常有些困惑，如果看过的书、听过的事儿事后完全没有印象，那我们还为什么要读书、听故事？&lt;/p&gt;
+
+&lt;p&gt;我想到一个理由。读书、听故事都是一种经历，是与外界与他人的一种交流。不见得我们与他人的交流都要有什么收获，而我们试图为之找到一个存在的理由的需求是不成立的。即使我们能从中收获些什么，也是心神愉悦、或是打发时间的副产品。我们应该以一种更平和的心态来学习和生活，不要急功近利，也不需要目标过于明确。如果看过了书却没有印象，那可能是时机不对，或是被隐藏于记忆深处等待共鸣。&lt;/p&gt;
+
+&lt;p&gt;所以，球形闪电我又看了一遍，有想法却没法表达，只能等待日后有一天突然的记忆闪回。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《世界奇妙物语》观后感一二</title>
+   <link href="http://localhost:4000/2017/03/11/%E4%B8%96%E7%95%8C%E5%A5%87%E5%A6%99%E7%89%A9%E8%AF%AD-%E6%98%A8%E6%97%A5%E5%85%AC%E5%9B%AD-%E6%89%8D%E8%83%BD%E7%90%83.html"/>
+   <updated>2017-03-11T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/03/11/世界奇妙物语-昨日公园-才能球</id>
+   <content type="html">&lt;h1 id=&quot;昨日公园&quot;&gt;昨日公园&lt;/h1&gt;
+
+&lt;p&gt;如同期望的一样，这是一个很怪的故事。如同《土拨鼠日》一样，主人公陷入了一日的循环中。他试图拯救自己的好朋友，而发现每次努力都无济于事，甚至会让事情变得更糟。最后主人公不得以放弃了拯救行动，而去退一步去满足朋友最后的愿望。&lt;/p&gt;
+
+&lt;p&gt;故事到这里算是有一定的意思了。通常我们会在事后后悔，后悔如果当时怎样，就不会怎样。故事给了一个完全不同的假设，即使我们怎样，事情可能也不一定如我们所愿的变好。大概我也以为这就是一个反美好的、悲观的故事了。但事实证明，奇妙物语的故事如果不在最后逆转，那就对不起它的名头。&lt;/p&gt;
+
+&lt;p&gt;七年以后，主人公的女朋友很是怪异的问他一句话——正是当年他在拯救朋友无果准备放弃时的一样。言者有意，闻者有心，我想他可能最想说的是“我还可以被拯救一下”。&lt;/p&gt;
+
+&lt;p&gt;通常我们可能对于重病亲人隐瞒病情，而自以为是为他们好；或者我们自己以为自己已经尽力，而不用再为之作无用的努力时，是否想过对方的想法。拯救或者放弃，永远不是一个单方面的、不后悔的选择。有太多的可能，使得每一个选择可能都是错误的，那我们将如何选择，如何能在众多的可能中选择而不后悔？我不知道。&lt;/p&gt;
+
+&lt;h1 id=&quot;才能球&quot;&gt;才能球&lt;/h1&gt;
+
+&lt;p&gt;才能球不同与阿拉丁神灯，虽然给予了三个才能，但我们并不知晓三个才能是什么。&lt;/p&gt;
+
+&lt;p&gt;主人公被赋予了三个才能。其一是绘画，虽然出彩但并不能谋生（感觉是在讽刺画家只有过世后其才能才被广泛知晓）；其二是足球颠球技能，花哨、吸引人，而没有什么用处。最后一个技能却并不明确，主人公诡异的笑容加上各种美国大片的犯罪镜头和柯南神推理，似乎是犯罪大师，实际上是犯罪心理侦破警官（实际上好与坏只在一念之间，并非技能之故，而在于能把持自己的原则）。&lt;/p&gt;
+
+&lt;p&gt;才能球让我想到了《龙珠》里的超神水，没有人知道你未开发的能力有多少。而设定为三个才能球，每个人或多或少都有不为人知、不为己知的出众才能等待发现，或许只是一个美好的安慰吧。真正的才能，可能并不是我们最终追求的目标，只能锦上添花，而不必沾沾自喜。&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《手机》读后记</title>
+   <link href="http://localhost:4000/2017/03/09/%E6%89%8B%E6%9C%BA.html"/>
+   <updated>2017-03-09T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/03/09/手机</id>
+   <content type="html">&lt;p&gt;书分为三部分，细想来这样安排另有深意：在过去没有手机的年代，人们的生活有什么不同。&lt;/p&gt;
+
+&lt;p&gt;严守一的父亲接触到最有趣的人是老牛，可以在饭桌上因为想起老牛的话而笑，也可以因为老牛背地里的一句损人的话而与他绝交，并且记了一辈子。有些结，只要说开了也就解开了。从这个意思上想，方便的沟通工具可能是帮助人解开误会的好道具。&lt;/p&gt;
+
+&lt;p&gt;老牛负责电话，竟然的打通了到矿区的电话，想到的第一件事是问对面“吃的啥？面条还是糊糊”。即使有了方便的工具，人与人之间可以交流的不过如是，并没有因为工具方便，我们想了解的、或者能了解的就更多。&lt;/p&gt;
+
+&lt;p&gt;“牛三斤，你的媳妇叫吕桂花”，妙极了。在那个沟通不便的情况下，怎样的人才会在电话里问上这么一句。一大一小，显示人们对沟通要求之低。而牛三斤下班回家就出门找人聊天，一冷一热，我们可能真的没有这么多需要沟通的。&lt;/p&gt;
+
+&lt;p&gt;最妙的是第三篇里严守一爷爷和奶奶的故事。没头没尾的话走了两年，甚至影响了几个人的轨迹，加上些许误会和阴差阳错，才有了两人的结合，才有了严守一和手机的故事。奶奶看的比别人开，是因为有这样的经历。没有什么大不了的事情是需要寻死觅活的、凡事要争个你错我对的。手机的故事从大的方面来说，世上本无事，人人自扰之。但轮到每个人的头上，又有谁能看的开呢？&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>乡村教师读后记</title>
+   <link href="http://localhost:4000/2017/02/06/%E4%B9%A1%E6%9D%91%E8%80%81%E5%B8%88-%E8%AF%BB%E5%90%8E%E8%AE%B0.html"/>
+   <updated>2017-02-06T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/02/06/乡村老师-读后记</id>
+   <content type="html">&lt;p&gt;在长途车上收听了刘慈欣的《乡村教师》小说广播剧，似乎以前看过这篇小说，但以听的方式进行，有不一样的感受。&lt;/p&gt;
+
+&lt;p&gt;大刘的这篇小说以双线进行，一支写乡村教师试图以教育唤醒麻痹的村民、燃烧生命教导学生的感人故事；另一支写爆发于银河系的碳基和硅基文明之间的战争蔓延。两条线最终以银河碳基文明认同人类文明为高等且值得保存的文明结束。老师教给孩子们的物理常识挽救了人类文明，这个极度巧合以致做作而荒诞的设定却并不令人反感。文明的香火的延续正是一个无比艰难的过程，如文中所说，有太多的灰与阻力，但其存在的意义也在如此。唯生命不至而奋斗不熄。&lt;/p&gt;
+
+&lt;p&gt;这篇科幻更多的是以科幻的笔触来写对乡村教师教书育人、传播知识的赞扬，以及对普通的、落后地区的、被现实倒逼的、麻木愚昧的生活状态的一种批判。银河高等文明以一种高高在上，可以左右和评价其它物种和文明的“神”存在。他们可以以一种上帝视角对人类文明进行观察，并以他们的标准来看到不一样的人类，包括那些不被我们重视的、甚至习以为常视而不见的地方：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;人类的交流效率极其低下，低下到甚至难以至信（信息论）&lt;/li&gt;
+  &lt;li&gt;人类的知识并不直接来自遗传，需要后天学习&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;对于知识的获取，我联想到了网络小说，特别是修真类的小说中一个有趣的问题：传承。小说中的主人公除了性格上的特点之外，无一例外具有大毅力和大机缘。而无论一个人物多么刻苦和努力，他在成为一个真正高手的过程中最大的困难在于传承，即从无数前辈高人去芜存精、博彩百家之长，走出自己的一条路。正如那句名言：我所以取得成绩，是因为我站在巨人的肩上。&lt;/p&gt;
+
+&lt;p&gt;但困难也在于此，尤其是当下知识爆发的时代，我们很难如古人那样穷尽古今之变，难以系统的、按事物发展的时间顺序由浅入深的掌握知识规律。我们面对的是几千年来生成的经验和知识，需要在很短的十几年内学习，并在几十年时间内将之消化吸收。同时我们会生成新的知识和经验，一代一代的加大已经无比庞杂的知识体系。如小说中所讲教师则是沟通代与代之间经验与知识的桥梁，是文明延续的基础，只是我们对此已经习以为常。&lt;/p&gt;
+
+&lt;p&gt;面对如此庞杂的知识，也许通达一切只能是人斗志昂扬时的一种奋斗目标，我们所能作的只能是在有限的时间与无限的知识中作出一个平衡。我想，经验和知识是生存的必要，是文明的基础，但并不是衡量一个人的品质和智慧的决定因素。或许掌握学习的方法，如何在纷繁的知识中选择和放弃的方法，才是我们更应该向老师们学习的。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《白垩纪往事》读后记</title>
+   <link href="http://localhost:4000/2017/02/03/%E7%99%BD%E5%9E%A9%E7%BA%AA%E5%BE%80%E4%BA%8B-%E5%88%98%E6%85%88%E6%AC%A3-%E8%AF%BB%E5%90%8E%E8%AE%B0.html"/>
+   <updated>2017-02-03T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/02/03/白垩纪往事-刘慈欣-读后记</id>
+   <content type="html">&lt;p&gt;篇名很容易让人联想到《地球往事三部曲》，虽然不及后者那样的宏大，而且无论恐龙或是蚂蚁都不能给人以直接的共鸣，但依然能给人留下足够的想象空间。&lt;/p&gt;
+
+&lt;p&gt;科幻对史前文明的假想并不在少数，但多数是假借上古类人生命或是外星生命等来书写人的故事。我认为其中最妙的地方在于其中讨论了两个共生文明的差异性：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;恐龙文明有足够的好奇心和创造能力，但缺少灵活的双手&lt;/li&gt;
+  &lt;li&gt;蚂蚁文明有足够的执行力与操作能力，但缺少探索和创新能力&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这种共生是脆弱的。联想到《1984》中的猪与其它动物，或许智力与体力的分工必然导致社会分化。&lt;/p&gt;
+
+&lt;p&gt;恐龙为什么没有发展出相应的操纵能力？主要是因为这种共生文明关系，让它们产生了依赖。同样蚂蚁也放弃了思考的能力，而依赖恐龙那更大的脑容量所引领的科技进步。这样看来，我们应该庆幸人类是“孤独”的智慧生命，因为缺少依靠，所以走出了一条自己的路。先天的缺陷并非不可弥补，而后天的偏见或将是致命的问题。&lt;/p&gt;
+
+&lt;p&gt;终极威慑的存在有赖于在于双方都是成熟的、有畏惧心理的、文明程度相当的个体，排除所有的不稳定的因素。但事实上效果并非如此，社会不是个体，突发因素也不可排除。因此无论是恐龙们使用反物质，或是三体黑暗森林威慑，或是核武器威慑，一旦开了这个口，那么现实将倒逼着威慑破裂。&lt;/p&gt;
+
+&lt;p&gt;小说中恐龙文明并没有特别的地方，甚至让我感觉到这就是人类文明的翻版，不过是将主人公换成了体型庞大而笨拙的恐龙而已。随着科技的发展，人类是否也会在动手能力上一再退化，科学技术或是人工智能是否会是我们的蚂蚁文明，而是否会因为共生导致文明分化，如小说中演译的这样？&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《命运》读后记</title>
+   <link href="http://localhost:4000/2017/02/02/%E5%91%BD%E8%BF%90-%E5%88%98%E6%85%88%E6%AC%A3-%E8%AF%BB%E5%90%8E%E8%AE%B0.html"/>
+   <updated>2017-02-02T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2017/02/02/命运-刘慈欣-读后记</id>
+   <content type="html">&lt;p&gt;看了刘慈欣的短篇小说《命运》。故事很简单，起因是主人公失误将 6500 万年前灭绝恐龙的小行星变成了地球卫星，后果是恐龙变成了世界的主宰，而人类则成为被圈养的“菜人”或“观赏人”。&lt;/p&gt;
+
+&lt;p&gt;首先，故事没有讨论“传统”的平等宇宙的概念。主人公穿越到过去后作了改变，回到的未来是他们本身的世界，还是一个分支后的宇宙？我更相信是后者。因为书中设定了曾经多次发生过因为穿越时间到过去的情况，人类世界并且作出了“严格”的规定来保护自己的“过去”不被改动。但可能发生的事情一定会发生。既然主人公还能作星际旅游，那么我们的世界一定是安全的。&lt;/p&gt;
+
+&lt;p&gt;曾经有段时间对电影《回到未来》系列的名称感到费解，总以为是翻译的问题。现在想来名字妙极了，其中含有很多复杂的情感：对平等宇宙的无限拓展性的感慨，对无限可能性的向往，以及我们世界沿着当前发展路线前进的一种侥幸。&lt;/p&gt;
+
+&lt;p&gt;书中还一个有趣的细节：不慎穿越到未来的人们没有再回来的。如果没有这一限制，将会发生奇妙的事：如果我们可以吸收未来世界的科技，那么我们的文明是否会在产生穿越技术的瞬间产生终极的跨越式发展！联想到最近有人预言人工智能发展到 2050 年将在生命科学领域产生跨越式的发展，届时技术发展延长人们的寿命可能会超出人的自然衰老。这种爆发式的发展是否会发生？又会对我们的进化产生怎样的影响，真是难以想象！&lt;/p&gt;
+
+&lt;p&gt;故事比较吸引我的不是恐龙成为世界的主宰，而是恐龙成为世界的主人后依然产生了人类这一物种，甚至产生了相当的文明（小说中作为观赏的人类使用类似拉丁文作为语言，这说明有相当的智慧和文明）。这可能吗？我表示怀疑：一个文明是否能够允许另一个平等的文明存在？目前的人类是惟一的高等文明，虽然我们总幻想宇宙存在无数与我们相当的文明，但我们却不愿意承认我们与世界上其它的生命——即使是我们的灵长类近亲——是与我们相当、可以被认可的文明。在我想来文明是排外的，进化过程中首先站立起来两足行走、或是开始对自己的过去产生记忆的变异的少数派很可能为大多数所排斥；而适者生存下来的智人占据了生存的优势时，一定会阻止其它不同进化或族群的生存。这是有限资源分配的问题！惟有自私的种群会在残酷的竞争中生存下来。&lt;/p&gt;
+
+&lt;p&gt;三体小说中黑暗森林假设文明发展排外性的最好理论。那么在本篇小说也许可以解释成文明的较低阶段，我们（或者恐龙文明）对于不同的文明存留着“脉脉之温情”，希望有其它的文明，让我们不再是孤独的孩子了。这样看来发展和进化将会使我们在冷酷与猜疑的路上越走越远，这是好还是坏？&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>GIT REFSPEC 重名问题解决小记</title>
+   <link href="http://localhost:4000/2016/11/07/git-refspec.html"/>
+   <updated>2016-11-07T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/11/07/git-refspec</id>
+   <content type="html">&lt;h1 id=&quot;原因&quot;&gt;原因&lt;/h1&gt;
+
+&lt;p&gt;有个远端仓库版本管理混乱，计划以后按照&lt;a href=&quot;https://www.oschina.net/translate/a-successful-git-branching-model&quot;&gt;这个模式&lt;/a&gt;（&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;原文&lt;/a&gt;）来管理版本。&lt;/p&gt;
+
+&lt;p&gt;现在的版本中同时有 v0.2.x 分支和 v0.2.x tag，当我们试图删除 v0.2.x 分支，git 回答无法完成操作。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;git push origin v0.2.x --delete
+&amp;gt; error: dst refspec v0.2.x matches more than one.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;研究过程&quot;&gt;研究过程&lt;/h1&gt;
+
+&lt;p&gt;最权威的莫过于自带的 manual 手册&lt;/p&gt;
+
+&lt;h2 id=&quot;git-push1&quot;&gt;git-push(1)&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;man 1 git-push&lt;/code&gt; 手册中讲到了 &lt;code&gt;&amp;lt;refspec&amp;gt;&lt;/code&gt; 的规则：&lt;code&gt;[+]&amp;lt;src-obj&amp;gt;:&amp;lt;dst-ref&amp;gt;&lt;/code&gt;，其中：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;src-obj&lt;/code&gt; 是提交的标识（或者分支），如 &lt;code&gt;HEAD&lt;/code&gt;，&lt;code&gt;master~4&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;dst-ref&lt;/code&gt; 是远端要被推送到的 ref（引用）&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;dst-ref&lt;/code&gt; 为空时，使用 &lt;code&gt;src-obj&lt;/code&gt; 同名的 ref&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;src-ref&lt;/code&gt; 为空时，则是删除远端的 &lt;code&gt;dst-ref&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;所以删除远端分支的语法应该是写作 &lt;code&gt;git push origin :v0.2.x&lt;/code&gt;，嗯，比诡异的 &lt;code&gt;push --delete&lt;/code&gt; 语法看起来好理解一些。&lt;/p&gt;
+
+&lt;p&gt;不过我们的问题还没有解决，如果有同名的 &lt;code&gt;dst-ref&lt;/code&gt; 如何解决，&lt;code&gt;ref&lt;/code&gt; 按什么规则书写，如何查看？&lt;/p&gt;
+
+&lt;h2 id=&quot;gitrevisions7&quot;&gt;gitrevisions(7)&lt;/h2&gt;
+
+&lt;p&gt;其中 &lt;strong&gt;SPECIFYING REVISIONS&lt;/strong&gt; 一节中完整的解释了 &lt;code&gt;&amp;lt;refname&amp;gt;&lt;/code&gt; 的表示，下面是我自己的理解。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;refname 是一个到 commit 的引用名称，方便记忆&lt;/li&gt;
+  &lt;li&gt;refname 的完整表示为 &lt;code&gt;refs/xxx/&amp;lt;refname&amp;gt;&lt;/code&gt; 这样一个层级名称&lt;/li&gt;
+  &lt;li&gt;我们通常用的 &lt;code&gt;HEAD&lt;/code&gt;，&lt;code&gt;FFETCH_HEAD&lt;/code&gt; 和 &lt;code&gt;ORIG_HEAD&lt;/code&gt; 等实际上是特殊的别名（类似 shell 里的 alias）&lt;/li&gt;
+  &lt;li&gt;一般情况我们并不使用完整的 &lt;code&gt;refs/heads/master&lt;/code&gt; 名称，而只用 &lt;code&gt;master&lt;/code&gt;，git 会匹配出完整的 refname。但有歧义时会提醒我们（就是本文开始遇到的问题）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这里不精确的类比一下&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;版本库： git 管理的每次提交对象由 sha1 来标识，通过快照保存提交的内容&lt;/li&gt;
+  &lt;li&gt;元数据： git 提供的丰富的功能，如分支、tag等，实际上是包含了指向一次提交的元信息&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;手册中解释了 git 如何来匹配 refname 的全名，实质上在 &lt;code&gt;.git&lt;/code&gt; 目录下，我们就能看到这些文件，文件的内容正是指向提交的 sha1 串&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.git/HEAD
+.git/refs/heads/master
+.git/refs/heads/v0.2.x
+.git/refs/tags/v0.2.x
+.git/refs/remotes/origin/master
+...
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;解决方法&quot;&gt;解决方法&lt;/h1&gt;
+
+&lt;p&gt;到这里我们的问题就很好解决了：只需要用完整的 refname 进行操作就行：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;git push origin :refs/tags/v0.2.x 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h1 id=&quot;总结&quot;&gt;总结&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;refname 是表示分支、HEAD、TAG 的易读的别名&lt;/li&gt;
+  &lt;li&gt;一般无需输入完整的 refname 名称，git 会自动匹配&lt;/li&gt;
+  &lt;li&gt;如果出现多个 refname 重名，则需要输入完整的 refname&lt;/li&gt;
+  &lt;li&gt;git push 是将本地的一个提交推送到远端，删除只是其没有本地提交的一个特例&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;参考资料&quot;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.kernel.org/pub/software/scm/git/docs/git-fetch.html&quot;&gt;man git-fetch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.oschina.net/translate/a-successful-git-branching-model&quot;&gt;介绍一个成功的 Git 分支模型&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《动物庄园》读后记</title>
+   <link href="http://localhost:4000/2016/11/06/%E5%8A%A8%E7%89%A9%E5%BA%84%E5%9B%AD%E8%AF%BB%E5%90%8E%E8%AE%B0.html"/>
+   <updated>2016-11-06T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/11/06/动物庄园读后记</id>
+   <content type="html">&lt;p&gt;读《动物庄园》之前，我已经知道这是一本关于政治的寓言书，并且知道里面的名言：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;所有动物生而平等，但有些动物更加平等&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;但在前言中，译者担忧：&lt;em&gt;我们甚至相信：和平就是安宁，拥有才是丰富&lt;/em&gt;，这让我很是费解，这有什么问题？带着这个疑惑，我读完了这本书。&lt;/p&gt;
+
+&lt;h2 id=&quot;故事梗概&quot;&gt;故事梗概&lt;/h2&gt;
+
+&lt;p&gt;动物庄园中，麦哲指引动物们寻求独立，希望能摆脱人的剥削，为自由生活而奋斗。而事情的发展一度如动物们期望的那样：人类庄园主们被赶走，动物们翻身作了主人，而且可以以民主的方式投票决定他们的未来。&lt;/p&gt;
+
+&lt;p&gt;但是很快，动物的内部产生了阶级，猪在众多动物中脱颖而出，因为它们有很强的学习能力和政治智慧。而在阶层内部，则产生了尖锐的冲突和斗争。一只叫拿破仑的种猪，以卑劣的手段驱逐了它的同僚，以或暴力（九只恶犬）、或散布恐怖（坏人企图破坏）、或洗脑宣传工作渐渐控制了整个庄园。&lt;/p&gt;
+
+&lt;p&gt;动物们企望的美好生活好像永远都在接近但永远不会到来，它们几乎已经不能确定它们的过去生活是否真的如是悲惨，更无法确认它们的现在是否真的如是幸福。它们不记得当初定立的“七诫”是否如是规定“动物生而平等”，但却惊恐的发现，它们的领袖开始以两脚站立、穿人类的衣服、手拿皮鞭，与人类无二。&lt;/p&gt;
+
+&lt;h2 id=&quot;动物形象&quot;&gt;动物形象&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;麦哲&lt;/p&gt;
+
+    &lt;p&gt;动物们的先贤圣人，也是动物们悲剧的起源。它在“不自由”中安度晚年，却号召大家为“自由”而奋斗。&lt;/p&gt;
+
+    &lt;p&gt;它教大家“英格兰兽”之歌，希望大家于黑暗之中找到光明。但这种光明来的太虚无，终将沦为野心家的工具。需要它时，它可以是“至圣先师”；不需要它时，它可以被踏上一万只脚。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;拿破仑&lt;/p&gt;
+
+    &lt;p&gt;动物庄园最大的野心家和最大的“恶人”，它擅长厚黑和借势，以恐惧来支配它的人民，并以更大的恐惧来给它们希望。它以人民解放者的身份出现，而以独裁而专制的身份结束。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;斯诺鲍&lt;/p&gt;
+
+    &lt;p&gt;拿破仑的同僚和政治对手，它有着更加务实作风，在政治斗争中失败而逃离庄园&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;山羊&lt;/p&gt;
+
+    &lt;p&gt;愚蠢的知识分子，它能够读懂并记得所有的诫律。但又如何，只不过在动物大会上很合时宜地喊上几句“四条腿好，两条腿坏”，亦或是“四条腿好，两条腿更好！”而已&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;马&lt;/p&gt;
+
+    &lt;p&gt;勤劳而朴实的劳动人民，天生就是劳碌的命。它们不一定能识得文字和诫律，也不一定能记得最初奋斗的目标，但谁也不能阻止它们为了眼前既定的目标而努力拼命。&lt;/p&gt;
+
+    &lt;p&gt;鲍克瑟的死是动物庄园里另人唏嘘的场景，正所谓哀其不幸、怒其不争。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;驴&lt;/p&gt;
+
+    &lt;p&gt;与马有些相似，但天生有一种倔强。辛勤工作，但却不愿意被它人所左右立场。它既是事件的参与者，而是事件的旁观者。它没有为正确的事情作出太大的抗争，但明哲保身无疑也是一种立身安命的态度。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;乌鸦&lt;/p&gt;
+
+    &lt;p&gt;有意思的是乌鸦并不是庄园的重要成员，甚至在一开始动物起义时它是跟着庄园主逃跑的。它宣扬的是更为传统的宿命天堂论。看似与追求自由独立、当家作主的庄园很不一致，但在它回归庄园后却得到了相当的礼遇。这一点，恐怕不能不解释成为统治需要&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;读后心得&quot;&gt;读后心得&lt;/h2&gt;
+
+&lt;p&gt;在我看来自由与民主是对矛盾。动物包含最初的人类一定是自由的，因为它们只需要为自己负责；但这种自由不一定的高效的、或幸福的。人类为了获得更大利益和更小的风险陆续地选择放弃一部分自由，以换取群体或社会的保护和支持，这便是社会。人类的进步则是扩大社会生产与获取个人自由的斗争与博弈。&lt;/p&gt;
+
+&lt;p&gt;这种博弈并不一定公平：放弃自由易，因为它是个体的行为；获取自由难，因为那是不再是个体的行为。&lt;/p&gt;
+
+&lt;p&gt;无论是“少数服从多数”的民主，还是投票人制度与“精英治国”，都是对个体自由的控制，并且希望更大的控制。自由、民主都是抽象的概念，而抽象是少数精英和政治家因为“智力卓越”的发明，对于普通大众，我们能接受的是具体化形象。这个抽象概念形象化的权力，正是政治家们追逐的所谓话语权和施政理念。无论是“为了更大的好”，或是“集体至上”，或是“和平既平安、拥有既丰富”，或是“精英治国” ，都不可避免的使权力集中于少数同样追求个人自由的个体手中，这恐怕是对“自由”的最大威胁。&lt;/p&gt;
+
+&lt;p&gt;动物庄园显然是乔治·奥威尔针对当时的政治环境提出的寓言说教。梁文道先生在他的《常识》一书中这样讲，时事评论难以成为经典的原因是它们有着明确的时效性和针对性。而动物庄园出版于 1944 年，至今看来依然让人触目惊心，仍然有巨大的影响力，不能不说，这是作者的不幸和时代的不幸。&lt;/p&gt;
+
+&lt;p&gt;是记，2016年11月于鹤城。&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>C语言中的堆与栈</title>
+   <link href="http://localhost:4000/2016/11/04/c-heap-and-stack.html"/>
+   <updated>2016-11-04T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/11/04/c-heap-and-stack</id>
+   <content type="html">&lt;h1 id=&quot;引子&quot;&gt;引子&lt;/h1&gt;
+
+&lt;p&gt;C 比较难理解指针的概念，经常与数组放在一起来讲，比如&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;char msg1[] = &quot;hello world&quot;;
+char *msg2  = &amp;amp;msg1[0];
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;此时， &lt;code&gt;msg1&lt;/code&gt; 与 &lt;code&gt;msg2&lt;/code&gt; 指向同一个内存位置，但由于类型的不同，&lt;code&gt;sizeof&lt;/code&gt; 结果也不同
+前者为 12，后者为 8（64位机器）&lt;/p&gt;
+
+&lt;p&gt;因此我们得出结论，数组可以转换为指针，通过对数组元素引用（取址）生成指针，但对于下面的代码&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;char* foo()
+{
+	char msg[] = &quot;hello world&quot;;
+	return msg;
+}
+
+char* bar()
+{
+	char* msg = &quot;hello world&quot;;
+	return msg;
+}
+
+int main()
+{
+	printf( &quot;%s\n&quot;, foo() );
+	printf( &quot;%s\n&quot;, bar() );
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;调用 &lt;code&gt;foo&lt;/code&gt; 时，会报段错误；而 &lt;code&gt;bar&lt;/code&gt; 却能够正常获取结果。&lt;/p&gt;
+
+&lt;p&gt;造成区别的原因在于：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;数组空间申请于栈（Stack），而栈的内容在函数返回被弹空&lt;/li&gt;
+  &lt;li&gt;指针初始化指向字符串位于堆（Heap），而堆的内容是全局的&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;栈与堆的对比&quot;&gt;栈与堆的对比&lt;/h1&gt;
+
+&lt;h2 id=&quot;栈的特点&quot;&gt;栈的特点&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;栈内的变量是本地的、临时的，会在调用时从栈里被分配，无需手动管理&lt;/li&gt;
+  &lt;li&gt;栈的大小是有限的，过大的变量无法在栈里使用&lt;/li&gt;
+  &lt;li&gt;可以用 &lt;code&gt;alloca&lt;/code&gt; 从栈里申请空间，但大小受限，且不可调整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;堆的特点&quot;&gt;堆的特点&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;堆是进程全局的，一般通过 &lt;code&gt;malloc()&lt;/code&gt; 和 &lt;code&gt;free()&lt;/code&gt; 主动申请和释放，因为忘记释放会造成内存泄漏&lt;/li&gt;
+  &lt;li&gt;不限制容量（受物理内存限制），可以用 &lt;code&gt;realloc&lt;/code&gt; 调整大小&lt;/li&gt;
+  &lt;li&gt;全局的&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;关于堆与栈的用法思考&quot;&gt;关于堆与栈的用法思考&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;变量大小需要变化，只能用堆&lt;/li&gt;
+  &lt;li&gt;如果变量占用空间过大，只能用堆，但在可能时候加 const 保护（放在 &lt;code&gt;.rodata&lt;/code&gt; 中）&lt;/li&gt;
+  &lt;li&gt;栈在函数参数和返回值传递中有很重要作用&lt;/li&gt;
+  &lt;li&gt;在函数式思维中，堆是造成系统状态复杂的主要原因&lt;/li&gt;
+  &lt;li&gt;函数式中，将变量的状态维护在栈上，而非堆上，减少对外界全局因素的依赖&lt;/li&gt;
+  &lt;li&gt;如果想在一个函数中，返回一个数组的内容，可以将之声明为 &lt;code&gt;static&lt;/code&gt;，但对于并行造成困难&lt;/li&gt;
+  &lt;li&gt;堆的操作在函数式中也是不可避免的，例如 &lt;code&gt;list&lt;/code&gt; 列表中添加新的元素需要从堆中申请，但由于有 gc 和刻意避免用户操作内容所以没有明显的问题&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;参考资料&quot;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://gribblelab.org/CBootcamp/7_Memory_Stack_vs_Heap.html&quot;&gt;Memory: Stack vs Heap&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>HTTP 文件上传</title>
+   <link href="http://localhost:4000/2016/10/20/HTTP%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0.html"/>
+   <updated>2016-10-20T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/10/20/HTTP文件上传</id>
+   <content type="html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+
+&lt;p&gt;最近有需要完成 HTML 页面上传文件至 hdfs 的后台功能。&lt;/p&gt;
+
+&lt;p&gt;本文记述 HTTP 文件上传的基本原理和协议。&lt;/p&gt;
+
+&lt;p&gt;计划后续完成以下内容：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;基于 clojure ring 和 apache commons FileUpload 实现文件上传的记录&lt;/li&gt;
+  &lt;li&gt;hdfs webhdfs 实现文件下载的代码分析&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;实现&quot;&gt;实现&lt;/h1&gt;
+
+&lt;h2 id=&quot;客户端&quot;&gt;客户端&lt;/h2&gt;
+
+&lt;p&gt;HTML 需要关心两点：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;表单提交方式 &lt;code&gt;enctype&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;input 类型 &lt;code&gt;file&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;enctype&quot;&gt;enctype&lt;/h3&gt;
+
+&lt;p&gt;enctype 属性定义了 FORM 元素提交到服务器的内容的编码方式 ，参见&lt;a href=&quot;https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4&quot; title=&quot;w3资料&quot;&gt;w3说明&lt;/a&gt;。HTML 表单提供了三种编码 FORM 提交方式：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;application/x-www-form-urlencoded&lt;/code&gt; (default)&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;multipart/form-data&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;text/plain&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;进行文件上传时（当 HTML 中包含有 &lt;code&gt;&amp;lt;input type=&quot;file&quot;&amp;gt;&lt;/code&gt; 时），需要使用第二种 &lt;code&gt;multipart/form-data&lt;/code&gt;，更加适应于非 ASCII 文本类型文件（如二进制文件）的上传&lt;/p&gt;
+
+&lt;h3 id=&quot;input-type&quot;&gt;input type&lt;/h3&gt;
+
+&lt;p&gt;参见 &lt;a href=&quot;https://www.ietf.org/rfc/rfc2388.txt&quot; title=&quot;Returning Values from Forms:  multipart/form-data&quot;&gt;RFC&lt;/a&gt; ，基于表单的文件上传方式中为 &lt;code&gt;input-type&lt;/code&gt; 添加了一个新的类型值 &lt;code&gt;FILE&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;协议&quot;&gt;协议&lt;/h2&gt;
+
+&lt;h3 id=&quot;基本协议&quot;&gt;基本协议&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;整体为 &lt;code&gt;multipart/form-data&lt;/code&gt;，指定后续内容间分隔符&lt;/li&gt;
+  &lt;li&gt;分隔符是客户端生成的特殊字段&lt;/li&gt;
+  &lt;li&gt;不同的数据顺序与输入顺序一致&lt;/li&gt;
+  &lt;li&gt;不同数据之间以 &lt;code&gt;part boundaries&lt;/code&gt; 分隔&lt;/li&gt;
+  &lt;li&gt;每个数据由 &lt;code&gt;&quot;Content-Disposition&quot; : &quot;form-data&quot;&lt;/code&gt; 标识
+    &lt;ul&gt;
+      &lt;li&gt;有独立的 MIME 类型（即 &lt;code&gt;Content-Type&lt;/code&gt;）&lt;/li&gt;
+      &lt;li&gt;&lt;code&gt;filename&lt;/code&gt; 属性，指定控制名称 (control name)&lt;/li&gt;
+      &lt;li&gt;可选的 &lt;code&gt;&quot;Content-Transfer-Encoding&quot;&lt;/code&gt; 设定内容编码方式&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;补充&quot;&gt;补充&lt;/h3&gt;
+
+&lt;p&gt;对于同时上传多个文件情况，则在 &lt;code&gt;multipart/form-data&lt;/code&gt; 中嵌入 &lt;code&gt;multipart/mixed&lt;/code&gt;，其内容与 &lt;code&gt;multipart/form-data&lt;/code&gt; 一致，需要指定自己独特的分隔符字符串&lt;/p&gt;
+
+&lt;h2 id=&quot;示例&quot;&gt;示例&lt;/h2&gt;
+
+&lt;p&gt;使用如下静态页面：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-html&quot;&gt;&amp;lt;!DOCTYPE html4&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;upload test&amp;lt;/title&amp;gt;
+  &amp;lt;/head&amp;gt;
+
+  &amp;lt;body&amp;gt;
+    &amp;lt;form enctype=&quot;multipart/form-data&quot;
+          method=&quot;post&quot;
+          action=&quot;http://localhost:3001&quot;&amp;gt;
+      &amp;lt;p/&amp;gt;&amp;lt;input type=&quot;text&quot; name=&quot;Your name&quot; value=&quot;larry&quot;/&amp;gt;
+      &amp;lt;p/&amp;gt;&amp;lt;input type=&quot;file&quot; name=&quot;file-to-upload&quot; filename=&quot;upload123.txt&quot;/&amp;gt;
+      &amp;lt;p/&amp;gt;&amp;lt;button type=&quot;submit&quot;&amp;gt;Submit&amp;lt;/button&amp;gt;
+    &amp;lt;/form&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;上传文件，并使用 &lt;code&gt;nc -l 3001&lt;/code&gt; 监听，用 wireshark 抓包结果如下图所示：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/HTTP文件上传/wireshark.png&quot; alt=&quot;上传示例&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;参考资料&quot;&gt;参考资料&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean&quot; title=&quot;What does enctype='multipart/form-data' mean?&quot;&gt;StackOverFlow&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.w3.org/TR/html401/interact/forms.html#h-17.13.4&quot; title=&quot;w3资料&quot;&gt;W3.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ietf.org/rfc/rfc2388.txt&quot; title=&quot;Returning Values from Forms:  multipart/form-data&quot;&gt;RFC2388&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>pro git 笔记</title>
+   <link href="http://localhost:4000/2016/08/18/git-learn.html"/>
+   <updated>2016-08-18T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/08/18/git-learn</id>
+   <content type="html">&lt;h1 id=&quot;基础&quot;&gt;基础&lt;/h1&gt;
+
+&lt;h2 id=&quot;名词&quot;&gt;名词&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;repository&lt;/li&gt;
+  &lt;li&gt;track&lt;/li&gt;
+  &lt;li&gt;stage&lt;/li&gt;
+  &lt;li&gt;commit&lt;/li&gt;
+  &lt;li&gt;pull&lt;/li&gt;
+  &lt;li&gt;push&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;创建仓库&quot;&gt;创建仓库&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;创建全新仓库&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;$ git init
+$ git add (files)
+$ git commit -m (message)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;克隆仓库&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;$ git clone [url`
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;克隆到的是远程几乎所有数据，而非仅为当前需要用到的数据&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;提交&quot;&gt;提交&lt;/h2&gt;
+
+&lt;p&gt;被 git 管理的文件为已跟踪状态，其它为未跟踪。已跟踪的文件状态又可细分为：未修改、已修改和已暂存。四者之前的转换关系如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;未修改&lt;/em&gt; 文件可以从 git 中移除(remove)，状态变为 &lt;em&gt;未跟踪&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;未跟踪&lt;/em&gt; 文件通过 &lt;code&gt;add&lt;/code&gt; 命令加入 git 管理，状态变为 &lt;em&gt;已暂存&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;已修改&lt;/em&gt; 文件同样通过 &lt;code&gt;add&lt;/code&gt; 命令加入暂存区，状态变为 &lt;em&gt;已暂存&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;已暂存&lt;/em&gt; 文件可以提交（ &lt;code&gt;commit&lt;/code&gt; ）并创建快照 ，状态变为 &lt;em&gt;未修改&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;通过 &lt;code&gt;.gitignore&lt;/code&gt; 来设置文件匹配模式，自动忽略某些特定名称的文件（或目录）&lt;/p&gt;
+
+&lt;p&gt;常用的命令如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git status -s/--short&lt;/code&gt; 查看状态&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git diff [--staged/--cached]&lt;/code&gt; 查看不同，加 cached 参数查看已暂存文件的不同&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git add&lt;/code&gt; 加入未跟踪或已修改文件到暂存区&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git commit [-a] [-m] [-v]&lt;/code&gt; 提交暂存修改&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git rm --cached&lt;/code&gt; 剔除文件（从git管理），加 cached 参数保留原文件&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git mv&lt;/code&gt; 重命名文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;历史&quot;&gt;历史&lt;/h2&gt;
+
+&lt;p&gt;通过 &lt;code&gt;git log&lt;/code&gt; 查看提交历史，有非常多的参数可选，常用的有&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;-p&lt;/code&gt; 显示具体修改内容&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;-2&lt;/code&gt; 仅显示最近两修改&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;--stat&lt;/code&gt; 显示统计信息（逐文件）&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;--sshortstat&lt;/code&gt; 显示简要统计信息&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;--pretty format&lt;/code&gt;，指定显示格式，例如 oneline, short, full, fuller, 具体的格式（类似printf）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code&gt;author&lt;/code&gt; vs &lt;code&gt;commitor&lt;/code&gt;
+一次提交可能有不同的作者和提交者，前者是作出修改的人，后者是将修改提交到 git 的人&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;撤消&quot;&gt;撤消&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;撤消操作可能会导致不可逆的数据丢失，谨慎操作！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;三种常见的撤消操作如下&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git commit --amend&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;重新提交，若快照无改动则只修改提交内容&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;从暂存区域中移除，但不修改文件内容&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git checckout -- &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;检出文件内容，&lt;strong&gt;危险，对文件作的所有修改都被覆盖&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;远程仓库&quot;&gt;远程仓库&lt;/h2&gt;
+
+&lt;p&gt;相对本地仓库（当前目录）而言，指托管在网络中的版本库。同一个GIT仓库可以同时有多个远程仓库，常用命令如下&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git remote -v&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;显示远程仓库列表&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git remove add &amp;lt;snortname&amp;gt; &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;添加一个新的远程仓库&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git fetch [remote-name]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;访问远程仓库，从中同步增量数据&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git pull&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;拉取并合并（仅对于跟踪远程分支）&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git push [remote-name] [branch-name]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;推送本地分支到远端仓库，需要先拉取合并再推送&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git remote show [remote-name]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;显示远程仓库详情&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git remote rm [remote-name]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;删除远程仓库&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git remote rename [from] [to]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;重命名远程仓库&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;标签&quot;&gt;标签&lt;/h2&gt;
+
+&lt;p&gt;指向某次提交，是之打上一个标记，常用于标记发行版本号。分为两种：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;lightweight tag&lt;/li&gt;
+  &lt;li&gt;annotated tag&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;前者是对某提交的引用，后者是一个完整的对象，包含独立的提交信息和备注&lt;/p&gt;
+
+&lt;p&gt;常用操作如下：&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;命令&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git tag -l&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;列出 tag&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git tag v1.4-lw&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;添加轻量 tag&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git tag -a v1.4 -m &quot;&amp;lt;description&amp;gt;&quot; [ref]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;添加附注标签&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git show [tagname]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;显示 tag 详细信息&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git push origin [tagname|--tags]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;推送指定/全部 tag 到远程仓库&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code&gt;git checkout -b [branchname] [tagname]&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;按 tag 内容创建一个新的分支&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;别名&quot;&gt;别名&lt;/h2&gt;
+
+&lt;p&gt;通过 &lt;code&gt;git config --global alias.&amp;lt;alias&amp;gt; [fullcommand]&lt;/code&gt; 来设置别名，fullcommand 可以是 git 的命令也可以是外部命令（以 “!” 开头）&lt;/p&gt;
+
+&lt;h1 id=&quot;branch分支&quot;&gt;Branch（分支）&lt;/h1&gt;
+
+&lt;h2 id=&quot;基础概念&quot;&gt;基础概念&lt;/h2&gt;
+
+&lt;p&gt;GIT 对象分为三级：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;文件快照，生成 blob 对象（原数据带 sha1 校验）；&lt;/li&gt;
+  &lt;li&gt;提交信息与提交的文件树，生成 tree 对象&lt;/li&gt;
+  &lt;li&gt;与分支对应的 commit 对象，指向 tree 对象，并有 parent 表示上一次提交的路径&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;分支可以看作一个轻量指针，因此 git 中可以方便和简单的操纵多个分支。&lt;/p&gt;
+
+&lt;p&gt;分支操作的常用命令有：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;branch: 新建一个分支，即新建一个 commit 对象指向 HEAD 指针
+    &lt;blockquote&gt;
+      &lt;p&gt;HEAD 是特殊的指针，指向当前所在的本地分支&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;checkout: 切换分支（ 修改 HEAD 指向 ），并恢复工作目录内容&lt;/li&gt;
+  &lt;li&gt;commit: 提交&lt;/li&gt;
+  &lt;li&gt;log: 常用参数有 –graph-all –decorate&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;分支与合并&quot;&gt;分支与合并&lt;/h2&gt;
+
+&lt;p&gt;分支使得可以随时从任何一处开启一个全新的开发过程。&lt;/p&gt;
+
+&lt;p&gt;两个分支形成分叉（diverged），分叉有两类关系&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;祖孙关系&lt;/li&gt;
+  &lt;li&gt;公共的祖先关系&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;多个分支可能需要合并，以集成不同阶段的开发成果。使用 &lt;code&gt;merge&lt;/code&gt; 命令进行自动合并，合并时：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;祖孙关系：祖先提交指针右移，称作 fast-forward&lt;/li&gt;
+  &lt;li&gt;公共祖先关系：进行三方合并（merge-in, merge-into, common-ancestor）&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;若两个分支对同一文件同一内容进行不一致的修改，无法自动合并。需要手工进行冲突排除&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;使用 git status 观察其中的 unmerged 文件&lt;/li&gt;
+  &lt;li&gt;手工编辑解决冲突或使用 &lt;code&gt;mergetool&lt;/code&gt; 进行操作&lt;/li&gt;
+  &lt;li&gt;add，commit 解决提交并记录解决方法&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;分支管理&quot;&gt;分支管理&lt;/h2&gt;
+
+&lt;p&gt;&lt;code&gt;git branch&lt;/code&gt; 有多种选项，其中参数 &lt;code&gt;--merged&lt;/code&gt; 和 &lt;code&gt;--no-merged&lt;/code&gt; 可以限制分支选择方式
+对于已经合并过的分支，可以放心删除之 &lt;code&gt;git branch -d&lt;/code&gt; 而不损失历史内容&lt;/p&gt;
+
+&lt;h2 id=&quot;分支策略&quot;&gt;分支策略&lt;/h2&gt;
+
+&lt;p&gt;分支有些习惯的用法，包含有：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;流水线模式
+提供不同级别的稳定性，master 保持稳定，将更新的开发置于 develop 分支&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;特性分支模式
+将不同的需求开发分布于不同的短期分支中，方便进行上下文切换（context-switch），易于进行代码审查&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;远程分支&quot;&gt;远程分支&lt;/h2&gt;
+
+&lt;p&gt;GIT 可以对多个远程仓库进行引用，使用 &lt;code&gt;ls-remote&lt;/code&gt; 或 &lt;code&gt;remote show&lt;/code&gt; 查看&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;对远程引用的只读操作在本地进行，其状态是最后一次通信时的记录，用 &lt;code&gt;fetch&lt;/code&gt; 命令更新&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;远程引用包含了分支、标签等内容，远程分支表示为 &lt;code&gt;remotes/(remote)/(branch)&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;创建跟踪分支&quot;&gt;创建跟踪分支&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;clone&lt;/code&gt; 远程仓库，生成 master 分支，与 origin/master 远程分支关联，称为跟踪分支（track）或上游分支（upstream）。也可以通过以下命令生成：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;git checkout -b serverfix origin/serverfix&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git checkout --track origin/serverfix&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;推送远程分支&quot;&gt;推送远程分支&lt;/h3&gt;
+
+&lt;p&gt;本地分支通过 &lt;code&gt;push&lt;/code&gt; 进行推送：&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git push (remote) (branch)&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;上述 branch 完整应为 &lt;code&gt;(local-branch):(remote-branch)&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;同步跟踪分支&quot;&gt;同步跟踪分支&lt;/h3&gt;
+
+&lt;p&gt;使用 &lt;code&gt;git pull&lt;/code&gt;，更明确的方法是先同步后合并&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;code&gt;git fetch&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;git merge&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;删除远程分支&quot;&gt;删除远程分支&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;git push --delete serverfix&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;变基rebase&quot;&gt;变基(rebase)&lt;/h2&gt;
+
+&lt;p&gt;与 merge 进行三方合并效果一样，用于保证提交历史的整洁。rebase 后主分支只需要快进合并（fast-forward）即可&lt;/p&gt;
+
+&lt;p&gt;Rebase 原理是提取当前分支 C4 相对公共祖先提交 C2 的修改，在主分支 C3 进行重演。rebase 会遮掩提交历史，而且可能造成一些麻烦，merge 相对安全。&lt;/p&gt;
+
+&lt;p&gt;总的原则是 &lt;strong&gt;只对尚未推送或分享给别人的本地修改执行变基操作清理历史，从不对已推送至别处的提交执行变基操作&lt;/strong&gt; ，并在可能的情况下使用 &lt;code&gt;git pull --rebase&lt;/code&gt; 来保证合并安全&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Clojure For The Brave And True 读后记</title>
+   <link href="http://localhost:4000/2016/07/07/Clojure_For_The_Brave_And_True_%E8%AF%BB%E5%90%8E%E8%AE%B0.html"/>
+   <updated>2016-07-07T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/07/07/Clojure_For_The_Brave_And_True_读后记</id>
+   <content type="html">&lt;p&gt;最近在线读过 &lt;a href=&quot;http://www.braveclojure.com/&quot; title=&quot;Clojure For The Brave And True&quot;&gt;Clojure For The Brave And True&lt;/a&gt; 一书。该书的内容比较丰富，插图和文笔使我联想到另一部在线书 &lt;a href=&quot;http://learnyouahaskell.com/&quot; title=&quot;Learn You A Haskell For Great Good&quot;&gt;Learn You A Haskell For Great Good&lt;/a&gt;。文字幽默，观点清晰，部分例子略显黑暗（勇敢者的Clojure书）而且对于不是英文母语的读者略显困难，但不影响观点的理解。&lt;/p&gt;
+
+&lt;p&gt;作者不假设读者有 Java 基础，并在一开始避免强调 Clojure 与 Java 高下比较，试图留给读者以 Clojure 解决问题的方法，而不是单纯 Clojure 知识介绍。全书分为两部分：基础部分和高阶部分，共十三个章节，外加两个附录（关于 Leiningen 和 Boot 项目管理工具）。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;基础部分&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;从 REPL 交互和 Emacs 使用开始讲起，系统介绍了 Clojure 的语法、数据结构、函数（解构、匿名函数和闭包）等。&lt;/li&gt;
+      &lt;li&gt;用单独的两个章节描述了 Clojure 中抽象数据结构 Sequence 和 Collection，并与 OOP 对比解释纯函数和不可变数据结构编程范式的优点。&lt;/li&gt;
+      &lt;li&gt;解释了变量（identifier）定义与 Namespace 的概念，并穿插有 Leiningen 相关使用方法&lt;/li&gt;
+      &lt;li&gt;宏，说明为什么 Clojure（或Lisp）与众不同，引导读者构造宏并展开，反复强调 Symbol 与 var 的关系，并证明宏不特殊、强大、要慎用&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;高阶部分&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;并行编程，从并行编程几个基本问题出发，分三章分别介绍了
+        &lt;ul&gt;
+          &lt;li&gt;Clojure 基本异步处理方法：&lt;code&gt;future&lt;/code&gt;, &lt;code&gt;delay&lt;/code&gt; 和 &lt;code&gt;promise&lt;/code&gt; 三个函数，能将求值过程的三个阶段定义、执行、取结果拆分开来&lt;/li&gt;
+          &lt;li&gt;Clojure 对事务的解决方案STM：&lt;code&gt;atom&lt;/code&gt;, &lt;code&gt;ref&lt;/code&gt;，并提到了动态绑定的原理、使用、风险&lt;/li&gt;
+          &lt;li&gt;Clojure 中模仿 Google Go 并发模型提出的 &lt;code&gt;core.async&lt;/code&gt; 异步通信模型解决方案&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;Clojure 多态与类抽象，涉及 Multimethod，Protocol 和 Record&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;读过后，留下最深印象的有这么一些观点和思考&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;OOP 解决问题方法过于呆板，导致有大量的专用操作方法，并不能达到通用；而 Clojure 强调的对数据的抽象使得更多时候有大量通用函数可用。两者并无高下，但个人认为后者可能更能调动人的思考和对对象的抽象，而非浪费时间在大量的查手册（ &lt;em&gt;It is better to have 100 functions operate on one data structure than 10 functions on 10 data structure&lt;/em&gt;）&lt;/li&gt;
+  &lt;li&gt;Clojure 的函数重载和多态比 Java 支持更丰富，更通用&lt;/li&gt;
+  &lt;li&gt;Clojure 继承 Lisp 语法，语法即数据，及求值模型使得语法易扩展，并独特。但并不能因为语法独特而放松对设计的把握&lt;/li&gt;
+  &lt;li&gt;Clojure 中抽象数据 Sequence 和 Collection 并不特别，使之特别的在于不可变与纯函数的结合&lt;/li&gt;
+  &lt;li&gt;纯函数是好习惯，但不能因之而放弃变化，因为编程最终需要的还是变化和副效应&lt;/li&gt;
+  &lt;li&gt;宏很危险，有很大的坑，学习宏有助于提高对求值过程的理解&lt;/li&gt;
+  &lt;li&gt;Clojure 提供的并发工具和框架能够简化并发开发，但不能替代流程设计&lt;/li&gt;
+  &lt;li&gt;不要试图在 Java 和 Clojure 比出高下，两者有不同的思考和设计。但要明白两者的差异。( &lt;em&gt;Clojure is a bit like a utopian commnity plunked down in the middle of a dystopian country&lt;/em&gt; )&lt;/li&gt;
+  &lt;li&gt;Clojure 中多态抽象很有用，特别是 Protocol + Record 方式&lt;/li&gt;
+  &lt;li&gt;学习 Clojure 不仅在于其库和语法，而在于解决具体问题时的思考方法&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《快学scala》 题解（第7章）</title>
+   <link href="http://localhost:4000/2016/06/13/scala-for-impatient-answer-chapter7.html"/>
+   <updated>2016-06-13T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/13/scala-for-impatient-answer-chapter7</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;两者的不同之处在于可见性的不同，例如第一种导入方式下 &lt;code&gt;Constant&lt;/code&gt; 不可见&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;package com {
+  package horstmann {
+    object Constant {
+      val pi = 3.1415926
+    }
+  }
+}
+
+
+package com.horstmann.impatient {
+  package test {
+    object Test extends App {
+      println( Constant.pi )
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;而第二种方式则是可见的&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;package com {
+  package horstmann {
+    object Constant {
+      val pi = 3.1415926
+    }
+  }
+}
+
+
+package com {
+  package horstmann {
+    package impatient {
+      package test {
+        object Test extends App {
+          println( Constant.pi )
+        }
+      }
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;例如在代码中写入下面的代码，可能导致 hadoop 文件系统不可用&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;package com {
+  package apache.hadoop.fs {
+    class FileSystem {
+    }
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;包 random 代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;package object random {
+
+  private val a = 1664525
+  private val b = 1013904223
+  private val n = 32
+  private var seed: Int = 0
+
+  private def next() {
+    seed = ((1L * seed * a + b) % ( 1L &amp;lt;&amp;lt; n )).toInt
+  }
+
+  def nextInt(): Int = {
+    next()
+    seed
+  }
+
+  def nextDouble(): Double = {
+    next()
+    1.0 * seed / (1L&amp;lt;&amp;lt;n)
+  }
+
+  def setSeed( seed: Int ): Unit = {
+    this.seed = seed
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;提供 &lt;code&gt;package object&lt;/code&gt; 语法可能是为了约束函数和变量定义，防止在顶级定义裸变量&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;private[com] def giveRaise(rate:Double)&lt;/code&gt; 约束定义只能在 &lt;code&gt;com&lt;/code&gt; 包内部可见&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;import java.util.{HashMap =&amp;gt; JavaHashMap}
+import scala.collection.mutable.{HashMap =&amp;gt; ScalaHashMap}
+
+object Chapter7 extends App {
+  val jh = new JavaHashMap[String,String]( System.getenv )
+  val sh = new ScalaHashMap[String,String]()
+  for ( e &amp;lt;- jh.entrySet.toArray ) {
+    val a = e.asInstanceOf[java.util.Map.Entry[String,String]]
+    sh(a.getKey) = a.getValue
+  }
+  println( sh )
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;修改后的代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;object Chapter7 extends App {
+
+  {
+    import java.util.{HashMap =&amp;gt; JavaHashMap}
+    import scala.collection.mutable.{HashMap =&amp;gt; ScalaHashMap}
+
+    val jh = new JavaHashMap[String,String]( System.getenv )
+    val sh = new ScalaHashMap[String,String]()
+    for ( e &amp;lt;- jh.entrySet.toArray ) {
+      val a = e.asInstanceOf[java.util.Map.Entry[String,String]]
+      sh(a.getKey) = a.getValue
+    }
+    println( sh )
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;将会把 &lt;code&gt;java&lt;/code&gt; 和 &lt;code&gt;javax&lt;/code&gt; 下所有的包内容都导入到当前包中，不是个好作法。因为 scala 中默认导入了 &lt;code&gt;scala._&lt;/code&gt; 的所有内容，这样导入会覆盖 scala 默认导入的包，如 &lt;code&gt;scala.xml&lt;/code&gt; 被 &lt;code&gt;javax.xml&lt;/code&gt; 替换，导致可能的程序异常。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;import java.lang.System._
+
+object Chapter7 extends App {
+
+  val user = getProperty( &quot;user.name&quot; )
+  if ( readLine() == &quot;secret&quot; ) {
+    printf( &quot;hello %s\n&quot;, user )
+  } else {
+    printf( &quot;invalid password\n&quot; )
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;被覆盖的如 Boolean, Byte, Double, Enum, Float, Long 等。&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;Java ClassLoader 由于动态特性，不能确定 JVM 中的 Class 情况，而是在收到有关类的请求后返回一个类或抛出异常，因此用默认的 ClassLoader 无法确切解决上面的问题。&lt;/p&gt;
+
+      &lt;p&gt;需要通过自定义 ClassLoader 来解决上述问题，待完成 :flags:&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《快学scala》 题解（第6章）</title>
+   <link href="http://localhost:4000/2016/06/12/scala-for-impatient-answer-chapter6.html"/>
+   <updated>2016-06-12T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/12/scala-for-impatient-answer-chapter6</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;定义的对象如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;object Conversions {
+
+  def inchesToCentimeters( inch: Double ): Double = {
+    inch * 2.54
+  }
+
+  def gallonsToLiters( gallon: Double ): Double = {
+    gallon * 3.78541178
+  }
+
+  def milesToKilometers( mile: Double ): Double = {
+    mile * 1.609344
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用扩展方式重新实现的类/对象代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class UnitConversion( base: Double ) {
+  def apply( from: Double ): Double = {
+    from * base
+  }
+}
+
+object InchesToCentimeters extends UnitConversion( 2.54 )
+object GallonsToLiters extends UnitConversion(3.78541178)
+object MilesToKilometers extends UnitConversion(1.609344)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;扩展对象代码为&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;object Origin extends java.awt.Point()
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;java.awt.Point 类不是一个抽象类或Interface，其中包含了 x,y 变量和相关操作，对象内容是可变的&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;定义的 Point 类及其伴生类如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Point( var x:Double = 0, var y: Double = 0 ) {
+  override def toString(): String = {
+    &quot;(%f,%f)&quot;.format( x, y )
+  }
+}
+
+object Point {
+  def apply( x: Double, y: Double ) = {
+    new Point( x, y )
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;应用程序如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;object Reverse extends App {
+  println(args.reverse.mkString(&quot; &quot;))
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;定义的枚举如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;object PlayCard extends Enumeration {
+  type Suit = Value
+  val Heart   = Value( &quot;♥&quot; )
+  val Diamond = Value( &quot;♦&quot; )
+  val Spade   = Value( &quot;♠&quot; )
+  val Club    = Value( &quot;♣&quot; )
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;同上，对象内新增函数 &lt;code&gt;isRed&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class PlayCard( val suit: PlayCard.Suit.Suit, val value: Char ) {
+
+  override def toString() = {
+    &quot;%s%s&quot;.format( suit, value )
+  }
+
+}
+
+object PlayCard {
+
+  object Suit extends Enumeration {
+    type Suit = Value
+    val Heart   = Value( &quot;♥&quot; )
+    val Diamond = Value( &quot;♦&quot; )
+    val Spade   = Value( &quot;♠&quot; )
+    val Club    = Value( &quot;♣&quot; )
+  }
+
+  import PlayCard._
+
+  def isRed( c: PlayCard ): Boolean = {
+    c.suit == Suit.Heart || c.suit == Suit.Diamond
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;object Color extends Enumeration {
+  type Color = Value
+  val  black = Value( 0x000000 )  
+  val  red   = Value( 0xff0000 )
+  val  green = Value( 0x00ff00 )
+  val  blue  = Value( 0x0000ff )
+  val  white = Value( 0xffffff )
+  val  yellow= Value( 0xffff00 )
+  val  cyan  = Value( 0x00ffff )
+  val  magenta = Value( 0xff00ff )
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《快学scala》 题解（第5章）</title>
+   <link href="http://localhost:4000/2016/06/10/scala-for-impatient-answer-chapter5.html"/>
+   <updated>2016-06-10T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/10/scala-for-impatient-answer-chapter5</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;修改后的 Counter 类如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Counter {
+  private var value = 0
+	 
+  def increment() {
+    if ( value == Int.MaxValue ) {
+      value = 0
+    } else {
+      value += 1
+    }
+  }
+	 
+  def current() = value
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;BankAccount 类如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class BankAccount( private var _balance: Double ) {
+   
+  def balance = _balance
+	 
+  def deposit( d: Double ) {
+    _balance += d
+  }
+	 
+  def withdraw( d: Double ): Double = {
+    val rd = d.min( _balance )
+    _balance -= rd
+    rd
+  }
+	 
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;类实现如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Time( val hours: Int, val minutes: Int ) {
+     
+  def before( other: Time ): Boolean = {
+    ( hours &amp;lt; other.hours ) ||
+    (( hours == other.hours ) &amp;amp;&amp;amp; ( minutes &amp;lt; other.minutes ))
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;修改后的类如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Time( val hours: Int, val minutes: Int ) {
+   
+  def this( minutes: Int ) {
+    this( minutes / 60, minutes % 60 )
+  }
+     
+  def before( other: Time ): Boolean = {
+    ( hours &amp;lt; other.hours ) ||
+    (( hours == other.hours ) &amp;amp;&amp;amp; ( minutes &amp;lt; other.minutes ))
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下，其中 &lt;code&gt;name&lt;/code&gt; 为 &lt;code&gt;JavaBeans&lt;/code&gt; 属性，&lt;code&gt;id&lt;/code&gt; 为正常 scala 属性&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;import scala.reflect.BeanProperty
+   
+class Student {
+  @BeanProperty var name: String = &quot;&quot;;
+  var id: Long = 0
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;生成的 Student 类中生成的方法有&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;private java.lang.String name;
+private long id;
+public java.lang.String name();
+public void name_$eq(java.lang.String);
+public void setName( java.lang.String );
+public long id();
+public void id_$eq(long0;
+public java.lang.String getName();
+public Student();
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;scala 中调用 JavaBeans 方法如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val s = new Student
+s.setName( &quot;larry&quot; )
+println( s.getName )
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;类代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Person( _age: Int ) {
+  var age = _age.max(0)
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;类代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Person( name: String ) {
+  val firstName = name.split( &quot; &quot; )(0)
+  val  lastName = name.split( &quot; &quot; )(1)
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;主构造器参数是普通参数，因为没有对该参数的访问需要&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;主构造器使用&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Car( val manufacturer: String, val genere: String,
+           val year: Int = -1,
+           var plate: String = &quot;&quot; ) {
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+    &lt;p&gt;使用默认参数可以避免过多的辅助构造器&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果用 Java 来实现上面的类，代码如下（比 scala 复杂的多）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-java&quot;&gt;public class Car {
+   
+    private String manufacturer;
+    private String genere;
+    private int    year;
+    public  String plate;
+	   
+    public int year() {
+        return year;
+    }
+	   
+    public String genere() {
+        return genere;
+    }
+	   
+    public String manufacturer() {
+        return manufacturer;
+    }
+	   
+    public Car( String m, String g, int y, String p ) {
+        this.manufacturer = m;
+        this.genere       = g;
+        this.year         = y;
+        this.plate        = p;
+    }
+	   
+    public Car( String manufacturer, String genere, int year ) {
+        this( manufacturer, genere, year, &quot;&quot; );
+    }
+	   
+    public Car( String manufacturer, String genere, String plate ) {
+        this( manufacturer, genere, -1, plate );
+    }
+	   
+    public Car( String manufacturer, String genere ) [
+        this( manufacturer, genere, -1 );
+    }
+	   
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用缺省参数，代码更少，同时更强调了默认的参数。代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;class Employee( val name: String = &quot;John Q. Public&quot;,
+                var salary: Double = 0.0 ) {
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《快学scala》 题解（第4章）</title>
+   <link href="http://localhost:4000/2016/06/10/scala-for-impatient-answer-chapter4.html"/>
+   <updated>2016-06-10T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/10/scala-for-impatient-answer-chapter4</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val equipment_i_want = Map(
+  &quot;Kindle Oasis&quot; -&amp;gt; 2499,
+  &quot;Macbook Pro&quot;  -&amp;gt; 12800,
+  &quot;violin&quot;       -&amp;gt; 3200
+)
+   
+val discount_equipment = for ((k,v) &amp;lt;- equipment_i_want) yield(k,v*.9)
+println( discount_equipment )
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val in = new java.util.Scanner( new java.io.File( &quot;/tmp/pep-3136.txt&quot; ) )
+val s  = new scala.collection.mutable.HashMap[String,Int]
+while( in.hasNext() ) {
+  val word = in.next()
+  s.update( word, s.getOrElse( word, 0 ) + 1 )
+}
+println(s)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val in = new java.util.Scanner( new java.io.File( &quot;/tmp/pep-3136.txt&quot; ) )
+val s  = new scala.collection.immutable.HashMap[String,Int]
+while( in.hasNext ) {
+  val word = in.next
+  s = s + ((word, s.getOrElse( word, 0 ) + 1))
+}
+println(s)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;同上，将 &lt;code&gt;HashMap&lt;/code&gt; 替换为 &lt;code&gt;TreeMap&lt;/code&gt;&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val in = new java.util.Scanner( new java.io.File( &quot;/tmp/pep-3136.txt&quot; ) )
+val s  = new scala.collection.immutable.TreeMap[String,Int]
+while( in.hasNext ) {
+  val word = in.next
+  s = s + ((word, s.getOrElse( word, 0 ) + 1))
+}
+println(s)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如下，scala 中没有可变的 &lt;code&gt;TreeMap&lt;/code&gt;，无法保证其顺序&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;import scala.collection.JavaConversions._
+   
+val in = new java.util.Scanner( new java.io.File( &quot;/tmp/pep-3136.txt&quot; ) )
+val s: scala.collection.mutable.Map[String,Int]  = new java.util.TreeMap[String,Int]
+while( in.hasNext() ) {
+  val word = in.next()
+  s.update( word, s.getOrElse( word, 0 ) + 1 )
+}
+println(s)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val h = new scala.collection.mutable.LinkedHashMap[String,Int]
+h += (&quot;Monday&quot; -&amp;gt; java.util.Calendar.MONDAY);   println( h )
+h += (&quot;Tuseday&quot;-&amp;gt; java.util.Calendar.TUESDAY);  pritnln( h )
+h += (&quot;Sunday&quot; -&amp;gt; java.util.Calendar.SUNDAY);   println( h )
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val props = System.getProperties
+val fmt = &quot;%%-%ds | %%s\n&quot;.format( props.map( _._1.length ).max + 3 )
+for ( (k,v) &amp;lt;- props ) { printf( fmt,k,v) }
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;函数如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def minmax( values: Array[Int] ): Tuple2[Int,Int] = {
+  (values.min, values.max)
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;函数如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def lteqgt( values: Array[Int], v: Int ): Tuple3[ Int, Int, Int ] = {
+  val lt = values.filter( _ &amp;lt; v ).size
+  val eq = values.filter( _ == v ).size
+  ( lt, eq, values.size - lt - eq )
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;将会生成 &lt;code&gt;((H,W), (e,o), (l,r,), (l,l), (o,d))&lt;/code&gt; 的 &lt;code&gt;Vector&lt;/code&gt; 对象。&lt;code&gt;zip&lt;/code&gt; 的作用是拼接两个序列中的每对元素（按最小长度），形成一个 Pair 的列表&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Name in WarCraft</title>
+   <link href="http://localhost:4000/2016/06/10/name-in-warcraft.html"/>
+   <updated>2016-06-10T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/10/name-in-warcraft</id>
+   <content type="html">&lt;p&gt;整理魔兽世界的名词，为看魔兽电影作准备 :-)&lt;/p&gt;
+
+&lt;h1 id=&quot;地理&quot;&gt;地理&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;海加尔山（圣山）&lt;/li&gt;
+  &lt;li&gt;艾泽拉斯（世界，风暴城地名）&lt;/li&gt;
+  &lt;li&gt;洛丹伦（东方大陆，人类王国名）&lt;/li&gt;
+  &lt;li&gt;卡利姆多（永烁星光之地）&lt;/li&gt;
+  &lt;li&gt;永恒之井&lt;/li&gt;
+  &lt;li&gt;翡翠梦境&lt;/li&gt;
+  &lt;li&gt;大漩涡&lt;/li&gt;
+  &lt;li&gt;世界之树（诺达希尔/苍穹之冠）&lt;/li&gt;
+  &lt;li&gt;德拉诺（兽人和德莱尼人世界）&lt;/li&gt;
+  &lt;li&gt;提瑞斯法（林地）&lt;/li&gt;
+  &lt;li&gt;奥特兰克山&lt;/li&gt;
+  &lt;li&gt;荆棘谷&lt;/li&gt;
+  &lt;li&gt;诺森德&lt;/li&gt;
+  &lt;li&gt;塔纳利斯&lt;/li&gt;
+  &lt;li&gt;卡兹莫丹（卡兹之峰）&lt;/li&gt;
+  &lt;li&gt;黑石塔&lt;/li&gt;
+  &lt;li&gt;萨多尔大桥&lt;/li&gt;
+  &lt;li&gt;敦霍尔德要塞&lt;/li&gt;
+  &lt;li&gt;奥特拉克山脉&lt;/li&gt;
+  &lt;li&gt;诺森德大陆&lt;/li&gt;
+  &lt;li&gt;太阳之井&lt;/li&gt;
+  &lt;li&gt;塞拉摩&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;人物名&quot;&gt;人物名&lt;/h1&gt;
+
+&lt;h3 id=&quot;泰坦&quot;&gt;泰坦&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;萨格拉斯（黑暗泰坦）&lt;/li&gt;
+  &lt;li&gt;阿曼瑟尔（众神之父）&lt;/li&gt;
+  &lt;li&gt;艾欧娜（生命赋予者）&lt;/li&gt;
+  &lt;li&gt;诺甘农&lt;/li&gt;
+  &lt;li&gt;卡兹格罗斯（世界锻造者）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;上古之神&quot;&gt;上古之神&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;拉格纳罗斯（炎魔）&lt;/li&gt;
+  &lt;li&gt;瑟拉塞恩（石母）&lt;/li&gt;
+  &lt;li&gt;奥拉基尔（驭风者）&lt;/li&gt;
+  &lt;li&gt;耐普图隆（猎潮者）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;守护巨龙&quot;&gt;守护巨龙&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;诺兹多姆（青铜龙，时间之龙、永恒之王）&lt;/li&gt;
+  &lt;li&gt;阿莱克斯塔萨（红龙，生命之王）&lt;/li&gt;
+  &lt;li&gt;伊瑟拉（绿龙，梦幻之王）&lt;/li&gt;
+  &lt;li&gt;玛利苟斯（蓝龙，魔法之王）&lt;/li&gt;
+  &lt;li&gt;耐萨里奥（黑龙，大地之王/死亡之翼）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;暗夜精灵&quot;&gt;暗夜精灵&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;艾露尼（月亮女神）&lt;/li&gt;
+  &lt;li&gt;艾萨拉（女王）&lt;/li&gt;
+  &lt;li&gt;塞纳留斯（半神）&lt;/li&gt;
+  &lt;li&gt;玛法里奥·怒风&lt;/li&gt;
+  &lt;li&gt;伊利丹&lt;/li&gt;
+  &lt;li&gt;泰兰德（女祭司）&lt;/li&gt;
+  &lt;li&gt;玛维·影歌（典狱官）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;高等精灵血精灵&quot;&gt;高等精灵（血精灵）&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;哈维斯（女皇艾萨拉参事）&lt;/li&gt;
+  &lt;li&gt;达斯雷玛（逐日者）&lt;/li&gt;
+  &lt;li&gt;安纳斯特里亚·逐日者&lt;/li&gt;
+  &lt;li&gt;艾拉莉娅·风行者（精灵游侠）&lt;/li&gt;
+  &lt;li&gt;希尔瓦娜斯·风行者&lt;/li&gt;
+  &lt;li&gt;凯尔萨斯&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;燃烧军团&quot;&gt;燃烧军团&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;阿克蒙德（污染者）&lt;/li&gt;
+  &lt;li&gt;玛诺洛斯（深渊领主）&lt;/li&gt;
+  &lt;li&gt;基尔加丹（欺诈者）&lt;/li&gt;
+  &lt;li&gt;提克迪奥斯（黑暗魔王）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;兽人部落&quot;&gt;兽人部落&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;耐奥祖（萨满祭司，巫妖之王）&lt;/li&gt;
+  &lt;li&gt;古尔丹（术士）&lt;/li&gt;
+  &lt;li&gt;杜隆坦（霜狼氏族）&lt;/li&gt;
+  &lt;li&gt;格罗姆·地狱咆哮（战歌氏族）&lt;/li&gt;
+  &lt;li&gt;奥格瑞姆·毁灭之锤&lt;/li&gt;
+  &lt;li&gt;布莱克汉&lt;/li&gt;
+  &lt;li&gt;卡尔瑟（兽人萨满）&lt;/li&gt;
+  &lt;li&gt;奇尔洛格·死眼（血窟氏族）&lt;/li&gt;
+  &lt;li&gt;耐克鲁斯（龙喉氏族）&lt;/li&gt;
+  &lt;li&gt;德雷克塔尔（萨满祭司）&lt;/li&gt;
+  &lt;li&gt;萨尔&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;其他&quot;&gt;其他&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;凯恩·血蹄（牛头人）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;半兽人&quot;&gt;半兽人&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;加罗娜&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;上古之战&quot;&gt;上古之战&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;克洛克斯（兽族勇士）&lt;/li&gt;
+  &lt;li&gt;克拉苏斯（龙族法师）&lt;/li&gt;
+  &lt;li&gt;罗宁（人类法师）&lt;/li&gt;
+  &lt;li&gt;瓦罗森（精灵队长）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;矮人&quot;&gt;矮人&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;莫迪姆斯·安威玛尔（高山之王）&lt;/li&gt;
+  &lt;li&gt;玛多兰·铜须&lt;/li&gt;
+  &lt;li&gt;卡德罗斯·蛮锤&lt;/li&gt;
+  &lt;li&gt;索瑞森（法师）&lt;/li&gt;
+  &lt;li&gt;莫德古德（法师，索瑞森之妻）&lt;/li&gt;
+  &lt;li&gt;库尔丹·蛮锤（矮人）&lt;/li&gt;
+  &lt;li&gt;麦格尼·铜须（矮人国王）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;人类&quot;&gt;人类&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;索拉丁（阿拉希国王）&lt;/li&gt;
+  &lt;li&gt;聂拉斯·埃兰（法师）&lt;/li&gt;
+  &lt;li&gt;莱恩（艾泽拉斯王子）&lt;/li&gt;
+  &lt;li&gt;安杜因·洛萨（阿拉希血统唯一传人）&lt;/li&gt;
+  &lt;li&gt;卡德加&lt;/li&gt;
+  &lt;li&gt;乌瑟尔（光明使者）&lt;/li&gt;
+  &lt;li&gt;戴林·普罗德摩尔（海军上将）&lt;/li&gt;
+  &lt;li&gt;图拉扬&lt;/li&gt;
+  &lt;li&gt;特雷纳斯（洛丹伦国王）&lt;/li&gt;
+  &lt;li&gt;达纳斯·托尔贝恩&lt;/li&gt;
+  &lt;li&gt;艾格文（守护者）&lt;/li&gt;
+  &lt;li&gt;麦迪文（守护者）&lt;/li&gt;
+  &lt;li&gt;罗宁（法师）&lt;/li&gt;
+  &lt;li&gt;安东尼达斯（达拉然法师）&lt;/li&gt;
+  &lt;li&gt;埃德拉斯·布莱克·摩尔&lt;/li&gt;
+  &lt;li&gt;吉恩·灰发（吉尔尼斯国王）&lt;/li&gt;
+  &lt;li&gt;瓦立安·瑞恩（艾泽拉斯国王）&lt;/li&gt;
+  &lt;li&gt;阿尔萨斯&lt;/li&gt;
+  &lt;li&gt;吉安娜·普罗德摩尔&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;亡灵&quot;&gt;亡灵&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;耐奥祖/巫妖之王&lt;/li&gt;
+  &lt;li&gt;克尔苏加德&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;娜迦&quot;&gt;娜迦&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;瓦辛&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;种族&quot;&gt;种族&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;卡多雷（星辰之子，暗夜精灵）&lt;/li&gt;
+  &lt;li&gt;埃瑞达&lt;/li&gt;
+  &lt;li&gt;纳斯雷兹姆（恐惧魔王）&lt;/li&gt;
+  &lt;li&gt;上古之神&lt;/li&gt;
+  &lt;li&gt;奎尔多雷（高等精灵/上层精灵）&lt;/li&gt;
+  &lt;li&gt;娜迦&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;组织&quot;&gt;组织&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;燃烧军团&lt;/li&gt;
+  &lt;li&gt;银月议会（高等精灵）&lt;/li&gt;
+  &lt;li&gt;玛苟克拉斯议会&lt;/li&gt;
+  &lt;li&gt;提瑞斯法议会（守护者）&lt;/li&gt;
+  &lt;li&gt;影子议会（兽人议会）&lt;/li&gt;
+  &lt;li&gt;洛丹伦联盟&lt;/li&gt;
+  &lt;li&gt;肯加托（法师议会）&lt;/li&gt;
+  &lt;li&gt;诅咒神教&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;王国&quot;&gt;王国&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;奎尔萨拉斯（高等精灵王国）&lt;/li&gt;
+  &lt;li&gt;阿曼尼帝国（巨魔王国）&lt;/li&gt;
+  &lt;li&gt;古拉巴什帝国（巨魔王国）&lt;/li&gt;
+  &lt;li&gt;阿兹亚其帝国（巨魔王国）&lt;/li&gt;
+  &lt;li&gt;阿拉索（阿拉希人国家）&lt;/li&gt;
+  &lt;li&gt;艾兹卓——尼拉布王国（蜘蛛王国）&lt;/li&gt;
+  &lt;li&gt;杜隆坦王国（兽人、牛头人、暗矛部落巨魔）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;人类七王国&quot;&gt;人类七王国&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;激流城（激流堡）&lt;/li&gt;
+  &lt;li&gt;达拉然&lt;/li&gt;
+  &lt;li&gt;吉尔尼斯&lt;/li&gt;
+  &lt;li&gt;奥特兰克&lt;/li&gt;
+  &lt;li&gt;库尔提拉斯&lt;/li&gt;
+  &lt;li&gt;洛丹伦&lt;/li&gt;
+  &lt;li&gt;暴风王国&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;矮人王国&quot;&gt;矮人王国&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;奥达曼（史前）&lt;/li&gt;
+  &lt;li&gt;奥丹姆（史前）&lt;/li&gt;
+  &lt;li&gt;奥杜尔（史前）&lt;/li&gt;
+  &lt;li&gt;铁炉堡（铜须部落）&lt;/li&gt;
+  &lt;li&gt;格瑞姆巴托（蛮锤部落）&lt;/li&gt;
+  &lt;li&gt;索瑞林（黑铁部落）&lt;/li&gt;
+  &lt;li&gt;艾瑞匹克城（蛮锤部落）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;战役&quot;&gt;战役&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;远古之战（上古之战）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;器物&quot;&gt;器物&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;恶魔之魂&lt;/li&gt;
+  &lt;li&gt;瘟疫之源&lt;/li&gt;
+  &lt;li&gt;霜之哀伤&lt;/li&gt;
+  &lt;li&gt;古尔丹之颅&lt;/li&gt;
+  &lt;li&gt;冰封王座&lt;/li&gt;
+  &lt;li&gt;萨格拉斯之眼&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《快学scala》 题解（第3章）</title>
+   <link href="http://localhost:4000/2016/06/08/scala-for-impatient-answer-chapter3.html"/>
+   <updated>2016-06-08T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/08/scala-for-impatient-answer-chapter3</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def ans1( n: Int ): Array[Int] = {
+  1.to(n).map{ x =&amp;gt; scala.util.Random.nextInt(n) }.toArray
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def ans2( a:Array[Int] ): Unit = {
+  for ( i &amp;lt;- 0.until(a.length-1,2) ) {
+    val t = a(i)
+    a(i) = a(i+1)
+    a(i+1) = t
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def ans3( a: Array[Int] ): Array[Int] = {
+  val swap_index = for( i &amp;lt;- 0.until(a.length) ) yield {
+    if ( i % 2 == 0 ) {
+      if ( i == a.length - 1 ) i else i + 1
+    }
+  } else {
+    i - 1
+  }
+  swap_index.map( i =&amp;gt; a(i) ).toArray
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def ans4( a:Array[Int] ): Array[Int] = {
+  a.filter( _ &amp;gt; 0 ) ++ a.filter( _ &amp;lt; 0 )
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def ans5( d: Array[Double] ): Double = {
+  d.sum / d.length
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在原位上修改&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def ans6_array( a: Array[Int] ): Unit = {
+  for ( i &amp;lt;- 0.until(a.length/2) ) {
+    val t = a(i)
+    a(i) = a(a.length-i-1)
+    a(a.length-i-1) = t
+  }
+}
+   
+def ans6_arraybuffer( a: ArrayBuffer[Int] ): Unit = {
+  a ++= a.reverse
+  a.remove( 0, a.length/2 )
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;可以使用 &lt;code&gt;Array.distinct: Array[T]&lt;/code&gt; 方法去重&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;重构使方法如下：&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def ans8( a: ArrayBuffer[Int] ): Unit = {
+  var negative_index = for ( i &amp;lt;- 0 until a.length if a(i) &amp;lt; 0 ) yileld i
+  for ( i &amp;lt;- negative_index.tail.reverse ) {
+    a.remove(i)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+    &lt;ul&gt;
+      &lt;li&gt;与第一种方式相比，从后往前地去除元素可以减少移动数量，从而性能较优&lt;/li&gt;
+      &lt;li&gt;与第二种方式相比，由于移除元素与长度线性相关，方式二所移除的元素都在末尾，因此性能较本方法优&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;for ( zone &amp;lt;- java.util.TimeZone.getAvailableIDs() 
+      if zone.startsWith( &quot;America/&quot; ) )
+  yield zone.stripPrefix( &quot;America/&quot; )
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码示意如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;import java.awt.datatransfer._
+import scala.collection.JavaConversions.asScalaBuffer
+import scala.collection.mutable.Buffer
+	
+val flavors = SystemFlavorMap.getDefaultsFlavorMap().asInstanceOf[SystemFlavorMap]
+val res: Buffer[String] = flavors.getNativesForFlavor( DataFlavor.imageFlavor )
+println( res )
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《快学scala》 题解（第2章）</title>
+   <link href="http://localhost:4000/2016/06/08/scala-for-impatient-answer-chapter2.html"/>
+   <updated>2016-06-08T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/08/scala-for-impatient-answer-chapter2</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;函数定义如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def signum( v: Int ) : Int = {
+  if ( v &amp;gt; 0 ) {
+    1
+  } else if ( v &amp;lt; 0 ) {
+    -1
+  } else {
+    0
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;{}&lt;/code&gt; 表示 Unit，类型为 void&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;当 x 为 &lt;code&gt;{}&lt;/code&gt; 时表达式 &lt;code&gt;x = y = 1&lt;/code&gt; 是合法的&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;for ( i &amp;lt;- 10 to (0,-1) ) {
+  println(i)
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;函数定义如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def countdown( n: Int ) : Unit = {
+  for ( i &amp;lt;- n to (0,-1) ) {
+    println(i)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;var p = 1L
+for( c &amp;lt;- &quot;Hello&quot; ) {
+  p *= c
+}
+println( p )
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;代码如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;println( &quot;Hello&quot;.map( _.toLong ).product )
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;函数定义如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def product( s:String ): Long = {
+  s.map( _.toLong ).product
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;递归函数定义如下（注意退出条件）&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def product_r( s: String ): Long = {
+  if ( s.isEmpty ) {
+    1
+  } else {
+    s.head.toLong * product_r( s.tail )
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;递归如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;def pow_x_n( x: Double, n: Int ): Double = {
+
+  if ( n == 0 ) { 
+    1
+  } else if ( n &amp;lt; 0 ) {
+    1.0 / pow_x_n( x, -n )
+  } else if ( n % 2 == 0 ) {
+    var h = pow_x_n( x, n/2 )
+    h * h
+  } else { 
+    x * pow_x_n( x, n-1 )
+  }
+
+}
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>《快学scala》 题解（第1章）</title>
+   <link href="http://localhost:4000/2016/06/07/scala-for-impatient-answer-chapter1.html"/>
+   <updated>2016-06-07T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/07/scala-for-impatient-answer-chapter1</id>
+   <content type="html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;键入 &lt;code&gt;3.&lt;/code&gt;，按 tab 出现&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code&gt;!=   &amp;gt;=             floatValue      isValidInt     synchronized     toString     
+##   &amp;gt;&amp;gt;             floor           isValidLong    to               unary_+      
+%    &amp;gt;&amp;gt;&amp;gt;            formatted       isValidShort   toBinaryString   unary_-      
+&amp;amp;    ^              getClass        isWhole        toByte           unary_~      
+*    abs            hashCode        longValue      toChar           underlying   
++    asInstanceOf   intValue        max            toDegrees        until        
+-    byteValue      isInfinite      min            toDouble         wait         
+-&amp;gt;   ceil           isInfinity      ne             toFloat          |            
+/    compare        isInstanceOf    notify         toHexString      →            
+&amp;lt;    compareTo      isNaN           notifyAll      toInt                         
+&amp;lt;&amp;lt;   doubleValue    isNegInfinity   round          toLong                        
+&amp;lt;=   ensuring       isPosInfinity   self           toOctalString                 
+==   eq             isValidByte     shortValue     toRadians                     
+&amp;gt;    equals         isValidChar     signum         toShort      
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;交互过程如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;import scala.math._
+sqrt(3)
+res0*res0 - 3
+// =&amp;gt; res1: Double = -4.440892098500626E-16
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;res0 是 val，不可修改&lt;/li&gt;
+  &lt;li&gt;返回 “crazycrazycrazy”，&lt;code&gt;StringOps.*(n:Int): String&lt;/code&gt; 返回n个字符串拼接结果&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;max&lt;/code&gt; 在 &lt;code&gt;RichInt&lt;/code&gt; 中定义，相当于 &lt;code&gt;10.max(2)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;BigInt(2) pow 1000&lt;/code&gt;，其中 &lt;code&gt;pow&lt;/code&gt; 是 BigInt 对象的方法&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;需要引入 BigInt 单例对象和 Random 类&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;import scala.math.BigInt._
+import scala.util.Random
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;需要用到 &lt;code&gt;BigInt.toString( radix: Int )&lt;/code&gt; 方法，如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;BigInt(scala.util.Random.nextInt).toString(36)
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用 &lt;code&gt;StringOps.head&lt;/code&gt; 和 &lt;code&gt;StringOps.last&lt;/code&gt;，如下&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-scala&quot;&gt;val a = &quot;Hello, World&quot;
+a.head
+a.last
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;分别用于取前 N 位、去掉前 N 位、取后 N 位、去掉后 N 位。&lt;br /&gt;
+&lt;code&gt;substring&lt;/code&gt;需要用绝对偏移量取子字符串，对于变长组合字符串计算可能略复杂；特别在末尾进行操作时更需要与 &lt;code&gt;length&lt;/code&gt; 配合使用&lt;/li&gt;
+&lt;/ol&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Archlinux 安装备忘</title>
+   <link href="http://localhost:4000/2016/06/03/archlinux-reinstall-note.html"/>
+   <updated>2016-06-03T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/03/archlinux-reinstall-note</id>
+   <content type="html">&lt;h1 id=&quot;安装过程&quot;&gt;安装过程&lt;/h1&gt;
+
+&lt;p&gt;重新安装 Archlinux( 2016.06.01 )，记录安装过程以作备忘。&lt;/p&gt;
+
+&lt;h2 id=&quot;准备安装环境&quot;&gt;准备安装环境&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;grub2&lt;/p&gt;
+
+    &lt;p&gt;需要通过 grub 来引导安装过程。之前安装的 debian，已经有 grub 环境，跳过这一步。在 windows 环境下可以安装 &lt;a href=&quot;http://neosmart.net/EasyBCD/&quot;&gt;easyBCD&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载最新 Archlinux 完整镜像：&lt;/p&gt;
+
+    &lt;p&gt;https://www.archlinux.org/download/&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;备份当前系统数据&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;引导安装过程&quot;&gt;引导安装过程&lt;/h2&gt;
+
+&lt;p&gt;重启进入 grub2 界面，按 &lt;code&gt;c&lt;/code&gt; 进入命令输入窗口，输入以下命令（注意将 isofile 和 /dev/sda5 替换为自己机器的路程，前者为 iso 文件在分区下的路径，/dev/sda5 为存放 iso 文件的块文件路径）&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-grub&quot;&gt;set root=(hd0,msdos5)
+isofile=/Download/archlinux-2016.06.01-dual.iso
+linux (loop)/arch/boot/x86_64/vmlinuz img_dev=/dev/sda5 img_loop=$isofile earlymodules=loop
+initrd (loop)/arch/boot/x86_64/arch_iso.img
+boot
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;如果正常，则进入 archlinux iso 系统环境&lt;/p&gt;
+
+&lt;h2 id=&quot;安装系统&quot;&gt;安装系统&lt;/h2&gt;
+
+&lt;p&gt;可以对照安装系统环境下 &lt;code&gt;~/install.txt&lt;/code&gt; 文件进行，主要进行以下操作：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;格式化分区&lt;/li&gt;
+  &lt;li&gt;连接网络（无线网络可以使用 &lt;code&gt;wifi-menu&lt;/code&gt; 命令进行配置）&lt;/li&gt;
+  &lt;li&gt;挂载要安装系统的分区到 &lt;code&gt;/mnt&lt;/code&gt; 下&lt;/li&gt;
+  &lt;li&gt;安装基本系统： &lt;code&gt;pacstrap /mnt base&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;编辑 &lt;code&gt;/etc/pacman.d/mirrorlist&lt;/code&gt;，配置软件源，建议使用 &lt;code&gt;mirrors.aliyun.com/archlinux&lt;/code&gt; 源&lt;/li&gt;
+  &lt;li&gt;生成 fstab 文件： &lt;code&gt;genfstab -p /mnt &amp;gt;&amp;gt; /mnt/etc/fstab&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;chroot 到新系统下： &lt;code&gt;arch-chroot /mnt&lt;/code&gt;
+    &lt;ul&gt;
+      &lt;li&gt;安装其它软件（特别注意应该安装网络相关的包，如 wireless-tools、iw 等）&lt;/li&gt;
+      &lt;li&gt;设置时区（将 /usr/share/zoneinfo/zone 下相应的时区链接到 &lt;code&gt;/etc/localtime&lt;/code&gt; 文件）&lt;/li&gt;
+      &lt;li&gt;配置语言支持，编辑选中 &lt;code&gt;/etc/locale.gen&lt;/code&gt; 文件中相应语言，并使用命令 &lt;code&gt;locale-gen&lt;/code&gt; 生成&lt;/li&gt;
+      &lt;li&gt;设置 root 密码&lt;/li&gt;
+      &lt;li&gt;安装 grub 并配置（使用 &lt;code&gt;grub-install&lt;/code&gt;）， &lt;strong&gt;再次确认 &lt;code&gt;/boot/grub/grub.cfg&lt;/code&gt; 配置&lt;/strong&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;退出 chroot，并重启机器&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;正常情况，重启后 grub 将引导系统进入&lt;/p&gt;
+
+&lt;h2 id=&quot;安装后配置&quot;&gt;安装后配置&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;添加普通用户&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装图形化界面，习惯使用 xfce4：&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S sudo xorg xorg-apps xorg-server xf86-video-intel lightdm-gtk-greeter xfce4 xfce4-goodies chromium fcitx-im fcitx-configtool
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;启动图形界面&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;systemctl enable lightdm; systemctl start lightdm
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装中文字体和编辑器&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;pacman -S community/wqy-microhei community/wqy-zenhei community/wqy-microhei-lite community/wqy-bitmapfont noto-fonts-clj vim emacs
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装基本开发环境&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;pacman -S base-devel
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;后记&quot;&gt;后记&lt;/h1&gt;
+
+&lt;p&gt;到这里系统基本安装完成，网络比较好的情况下半小时搞定整个过程。后续继续调整图形界面和安装软件，可以投入使用。&lt;/p&gt;
+
+&lt;p&gt;这里还要反省一下自己，不要过度的挑剔和依赖于工具。没有最好的工具，或者说总有更好的工具，重要的是我们能用它们作些什么。&lt;/p&gt;
+
+&lt;p&gt;希望这次重装系统能多用些日子 :-)&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Emacs 使用 fcitx 输入法配置备忘</title>
+   <link href="http://localhost:4000/2016/06/02/emacs-with-fcitx.html"/>
+   <updated>2016-06-02T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/06/02/emacs-with-fcitx</id>
+   <content type="html">&lt;p&gt;习惯用 Emacs 用来写一些笔记，但五笔输入法( By Yuwen Dai )用起来不是很顺手，还是 fcitx 更好用一些。&lt;/p&gt;
+
+&lt;p&gt;在 debian8.2 ，英文 locale 下，作以下配置：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;安装 fcitx&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;sudo apt-get install fcitx fcitx-frontend-all fcitx-config-gtk fcitx-table-all
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;配置默认输入法 （使用 &lt;code&gt;im-config&lt;/code&gt; 命令，并按提示进行）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;配置 fcitx（使用 &lt;code&gt;fcitx-config-gtk3&lt;/code&gt; 命令，这里我习惯将输入法换出快捷键设置为 &lt;code&gt;Ctrl-\&lt;/code&gt;）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;设置 emacs locale 环境变量:&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;alias emacs=&quot;LC_CTYPE=zh_CN.UTF8 emacs&quot;
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果在 emacs 中可以调出 fcitx 输入框，但文字不能正确上屏，则需要确认是否包含zh_CN.UTF-8&lt;/p&gt;
+
+    &lt;pre&gt;&lt;code class=&quot;language-shell&quot;&gt;locale -a
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;如果没有，则可以使用 &lt;code&gt;sudo dpkg-reconfigure locales&lt;/code&gt;，并选择之&lt;/p&gt;
+
+&lt;p&gt;至此，emacs 可以正常使用 fcitx 输入法。&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>CGI 与 FastCGI 备忘</title>
+   <link href="http://localhost:4000/2016/05/31/cgi.html"/>
+   <updated>2016-05-31T00:00:00+08:00</updated>
+   <id>http://localhost:4000/2016/05/31/cgi</id>
+   <content type="html">&lt;h1 id=&quot;概述&quot;&gt;概述&lt;/h1&gt;
+
+&lt;p&gt;CGI ( common gateway interface ) 是 WEB 服务器与浏览器之间进行动态资源交换的一种&lt;strong&gt;协议&lt;/strong&gt; ，有时也指 CGI program 或 CGI script。&lt;/p&gt;
+
+&lt;p&gt;WEB 服务器配置 CGI 服务，当收到请求服务后，准备执行环境并调用 CGI 脚本，将 CGI 脚本标准输出(stdout) 作为 HTTP 响应头和内容返回。&lt;/p&gt;
+
+&lt;p&gt;CGI 脚本可由任何语言编写，其本质是一个生成页面内容的外部程序，用于为页面增加动态内容。与普通程序输入输出不同，CGI 的输入为 HTTP 请求（POST或GET等）而输出中应该包含 &lt;code&gt;MIME-TYPE&lt;/code&gt; 头，如 &lt;code&gt;Content-type: text/html\n\n&lt;/code&gt; 来标志返回 HTTP 类型。&lt;/p&gt;
+
+&lt;p&gt;FastCGI 为了解决 CGI 对每次请求都单独发起一个进程（或线程）来执行造成大量的开销，引入“池”的概念，启动 N 个守护进程，并从进程池中取出一个空闲的进程来处理请求。&lt;/p&gt;
+
+&lt;h1 id=&quot;apache-cgi-配置&quot;&gt;Apache CGI 配置&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;LoadModule&lt;/code&gt; 加载相关 Apache 模块（cgi, cgid, fcgid 等）&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;ScriptAlias&lt;/code&gt; 配置目录，该目录下的文件将被视为 CGI 脚本（要求可执行、有读写权限）&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;AddHandler&lt;/code&gt; 或 &lt;code&gt;SetHandler&lt;/code&gt; 匹配可执行脚本&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;Options +ExecCGI&lt;/code&gt; 使 Apache 执行目录下的文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;cgi-脚本&quot;&gt;CGI 脚本&lt;/h1&gt;
+
+&lt;p&gt;CGI 脚本可以用任何编程语言写成，主要解析输入并生成输出。输入以键值对表示，主流语言都有可用的库来简化解析输入和调试过程。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;perl 可以使用 &lt;code&gt;CGI.pm&lt;/code&gt; 模块&lt;/li&gt;
+  &lt;li&gt;python 内置有 &lt;code&gt;cgi&lt;/code&gt; 模块&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ 
+</feed>

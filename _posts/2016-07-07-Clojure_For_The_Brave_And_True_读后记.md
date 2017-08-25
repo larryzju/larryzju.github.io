@@ -1,7 +1,7 @@
 ---
 title: Clojure For The Brave And True 读后记
 layout: post
-tag: 读后记
+tag: 计算机
 ---
 
 最近在线读过 [Clojure For The Brave And True][CFBT] 一书。该书的内容比较丰富，插图和文笔使我联想到另一部在线书 [Learn You A Haskell For Great Good][LYHFGG]。文字幽默，观点清晰，部分例子略显黑暗（勇敢者的Clojure书）而且对于不是英文母语的读者略显困难，但不影响观点的理解。
