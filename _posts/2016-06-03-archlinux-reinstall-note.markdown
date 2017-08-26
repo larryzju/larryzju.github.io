@@ -1,6 +1,7 @@
 ---
 title: Archlinux 安装备忘
 layout: post
+tags: 计算机
 ---
 
 # 安装过程

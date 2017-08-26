@@ -1,6 +1,7 @@
 ---
 title: C语言中的堆与栈
 layout: post
+tags: 计算机
 ---
 
 # 引子

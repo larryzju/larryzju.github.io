@@ -1,6 +1,7 @@
 ---
 title: CGI 与 FastCGI 备忘
 layout: post
+tags: 计算机
 ---
 
 # 概述
