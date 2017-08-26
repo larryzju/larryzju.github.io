@@ -9,3 +9,8 @@
 #links li {
 	list-style-type: none;
 }
+
+.content p {
+	line-height: 1.8em;
+}
+
