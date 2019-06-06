@@ -1,8 +1,9 @@
 ---
+title: The little Go Book 笔记 
 layout: post
-title: "The little Go Book" 笔记
 tags: code
 ---
+
 
 目录
 ====
