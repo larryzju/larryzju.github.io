@@ -22,7 +22,7 @@ tags: code
 ====
 
 本笔记整理自 [The Little Go
-Book](https://www.openmymind.net/The-Little-Go-Book/) 一书。原始笔记在 http://blog.doobby.org/diary/programming/golang/the-little-go-book.html，更新不会同步到本文。
+Book](https://www.openmymind.net/The-Little-Go-Book/) 一书。原始笔记在 http://blog.doobby.org/diary/programming/golang/the-little-go-book.html ，更新不会同步到本文。
 
 为什么不愿意学习新的语言
 ------------------------
