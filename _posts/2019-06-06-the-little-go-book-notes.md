@@ -1,7 +1,7 @@
 ---
 title: The little Go Book 笔记 
 layout: post
-tags: code
+tags: 计算机
 ---
 
 

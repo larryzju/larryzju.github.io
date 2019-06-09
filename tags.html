@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div id="home">
+  <h2><i class="fa fa-bookmark"></i> Tags </h2> 
+  {% for tag in site.tags %}
+  <h3 class="tags" id='{{ tag[0] }}'><i class="fa fa-tag"></i>{{ tag[0] }}<span class="tag-count">{{ tag[1].size }}</span></h3>
+  <ul class="posts">
+    {% for post in tag[1] %}
+    <li>
+      <span>{{post.date | date: "%Y/%m/%d"}}</span>
+      <a href="{{post.url}}">{{post.title}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endfor %}
+</div>

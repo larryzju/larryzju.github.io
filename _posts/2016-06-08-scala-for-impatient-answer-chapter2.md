@@ -1,7 +1,7 @@
 ---
 title: 《快学scala》 题解（第2章）
 layout: post
-tags: 快学scala题解 计算机
+tags: 计算机
 ---
 
 1. 函数定义如下

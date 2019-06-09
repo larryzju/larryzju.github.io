@@ -1,16 +1,54 @@
 #tags li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 #links {
-	margin-top: 80px;
+  margin-top: 80px;
 }
 
 #links li {
-	list-style-type: none;
+  list-style-type: none;
 }
 
 .content p {
-	line-height: 1.8em;
+  line-height: 1.8em;
 }
 
+nav h2 {
+  font-size: 1.2rem;
+  color: #e2e2e2;
+  text-shadow: -1px 1px 1px #181818;
+}
+
+#logo {
+  margin-bottom: 10px;
+}
+
+ul.posts h3.tags {
+  color: #047398;
+}
+
+ul.posts span + a {
+  padding-left: 1rem;
+  font-family: "Times", "FangSong", "FZQingFangSongS Bold", sans-serif;
+  font-weight: 500;
+}
+
+span.tag-count {
+  border: 1px solid #99c6de;
+  border-radius: 2rem;
+  font-size: .3rem;
+  padding: 0 .3rem;
+  margin: 0 .4rem;
+  background-color: #99c6de;
+  color: #ffffff;
+}
+
+h1.title {
+  font-size: 2.5rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 4px solid #EEEEEE;
+  text-align: right;
+  padding-right: 1rem;
+  margin-bottom: 3rem;
+}

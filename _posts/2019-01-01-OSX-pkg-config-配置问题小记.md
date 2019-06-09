@@ -1,7 +1,7 @@
 ---
 title: OSX pkg-config 配置问题小记
 layout: post
-tags: dev linux osx
+tags: 计算机
 ---
 
 

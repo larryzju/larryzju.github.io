@@ -131,9 +131,9 @@ nav h1, nav h2 {
 
 #post pre {
   border: 1px solid #ddd;
-  background-color: #eef;
   padding: 0 .4em;
   margin-bottom: 20px !important;
+  overflow: scroll;
 }
 
 #post ul,
@@ -141,9 +141,9 @@ nav h1, nav h2 {
   margin-left: 1.35em;
 }
 
+
 #post code {
   border: 1px solid #ddd;
-  background-color: #eef;
   font-size: 85%;
   padding: 0 .2em;
 }
@@ -166,7 +166,7 @@ nav h1, nav h2 {
 }
 
 .content {
-  font: 400 16px/22px "open sans", sans-serif;
+  font: 300 16px/22px Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Microsoft YaHei", "PingFang SC", sans-serif;
   border-left: 1px solid #DDD;
   padding-left: 40px;
   padding-top: 25px;
@@ -194,6 +194,7 @@ nav h1, nav h2 {
 }
 
 #logo, #gravatar {
+  width: 180px;
   margin-bottom: 25px;
 }
 

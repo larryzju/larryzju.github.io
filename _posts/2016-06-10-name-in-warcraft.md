@@ -1,7 +1,7 @@
 ---
 title: Name in WarCraft
 layout: post
-tag: 杂记
+tag: 杂文
 ---
 
 整理魔兽世界的名词，为看魔兽电影作准备 :-)
