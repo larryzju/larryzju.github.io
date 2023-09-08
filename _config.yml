@@ -1,5 +1,5 @@
 # General Jekyll Config
 highlighter: rouge
-url: https://larryzju.github.io
+url: https://blog.doobby.io
 lsi: false
 exclude: [LICENSE, CNAME, README.md, .gitignore, Gemfile, Gemfile.lock]
